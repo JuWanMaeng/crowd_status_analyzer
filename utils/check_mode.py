@@ -19,28 +19,7 @@ def check(mode,model):
     if mode==None:
         assert 'no mode selected!'
     else:  
-        if mode=='fer':
-            # load dataset
-            train_ds=FERDataset(phase='train')
-            val_ds=FERDataset(phase='val')
-            test_ds=FERDataset('test')
-            # make dataloade
-            train_dl = DataLoader(train_ds, batch_size=256, shuffle=True,num_workers=16)
-            val_dl = DataLoader(val_ds, batch_size=32, shuffle=True,num_workers=4)
-            test_dl=DataLoader(test_ds,batch_size=32,shuffle=True,num_workers=1)
-            
-            print(mode)
-            print(f'total train data:{len(train_dl.dataset)}')
-            print(f'total val data:{len(val_dl.dataset)}')
-            print(f'total test data:{len(test_dl.dataset)}')
-            
-
-            criterion = FocalLoss()
-            optimizer = optim.Adam(model.parameters(), lr=0.001)
-            scheduler = lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.5)
-
-        
-        elif mode=='emotion':
+        if mode=='emotion':
             # load dataset
             train_ds=ExpDataset(phase='train')
             val_ds=ExpDataset(phase='val')
@@ -79,14 +58,17 @@ def check(mode,model):
         elif mode=='age':
             train_ds=AgeDataset(phase='train')
             val_ds=AgeDataset(phase='val')
+            test_ds=AgeDataset(phase='test')
             
             # make dataloade
-            train_dl = DataLoader(train_ds, batch_size=256, shuffle=True,num_workers=16)
+            train_dl = DataLoader(train_ds, batch_size=256, shuffle=True,num_workers=8)
             val_dl = DataLoader(val_ds, batch_size=32, shuffle=True,num_workers=4)
+            test_dl=DataLoader(test_ds,batch_size=16,shuffle=True,num_workers=1)
             
             print(mode)
             print(f'total train data:{len(train_dl.dataset)}')
             print(f'total val data:{len(val_dl.dataset)}')
+            print(f'total test data:{len(test_dl.dataset)}')
             
             criterion=nn.CrossEntropyLoss()
             optimizer = optim.Adam(model.parameters(), lr=0.001)

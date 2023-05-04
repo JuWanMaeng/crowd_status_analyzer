@@ -154,6 +154,8 @@ class GenderDataset(data.Dataset):  # UTKFace 에서 성별만 따로 뽑음
             ])
         
         
+        
+        
 
     def __getitem__(self, index):
         img_path,gender=self.data[index]['img'],self.data[index]['label']
@@ -204,21 +206,22 @@ class AgeDataset(data.Dataset):  # UTKFace 에서 성별만 따로 뽑음
             transforms.ToTensor(),
             transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
             ])
-        
+        self.label={'youth':0, 'student':1,'adult':2, 'elder':3}
         
 
     def __getitem__(self, index):
-        img_path,gender=self.data[index]['img'],self.data[index]['label']
+        img_path,age=self.data[index]['img'],self.data[index]['label']
         img=cv2.imread(img_path)
         img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         img=im.fromarray(img)
+        age=self.label[age]
         
         if self.phase=='train':
             
             img=self.train_transform(img)
         else:
             img=self.transform(img)
-        return img,gender
+        return img,age
 
     def __len__(self):
         return len(self.data)

@@ -21,13 +21,13 @@ from utils.visuallize import vis
 import wandb
 
 #################################################################
-wandb.init(project='emotion',entity='kookmin_ai')
+wandb.init(project='age',entity='kookmin_ai')
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
-mode='emotion'
+mode='age'
 backbone='resnet18'
 model=resnet.EmotionModel()
 max_epoch=100
-wandb.run.name=f'{backbone}_Cross'
+wandb.run.name=f'{backbone}'
 #wandb.run.save()
 ################################################################
 model_name=f'weight/tmp/{mode}128_{backbone}.pt'
@@ -63,8 +63,8 @@ for epoch in range(max_epoch):
     # loss 와 acc를 각각 기록하는 코드    
     wandb.log({'train_ loss':train_loss,
                'val_loss':val_loss,
-               'train_acc':train_metric,
-               'val_acc':val_metric},step=epoch+1)
+               'train_acc':train_metric*100,
+               'val_acc':val_metric*100},step=epoch+1)
     
     if val_loss < best_loss:
         best_loss = val_loss

@@ -1,0 +1,14 @@
+device:cuda:0, mode:age, backbone:resnet18
+age
+total train data:26790
+total val data:3349
+total test data:3347
+************************************************************
+1/100 current_lr:0.001
+train: |                                                | 0/105 [00:19<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/joowan/Desktop/face_pr/train_single_task.py", line 53, in <module>
+    train_loss, train_metric = loss_epoch(model, criterion, train_dl,device, phase='train',opt=optimizer)
+  File "/home/joowan/Desktop/face_pr/utils/train_utils.py", line 47, in loss_epoch
+    label=label.to(device)
+AttributeError: 'tuple' object has no attribute 'to'
