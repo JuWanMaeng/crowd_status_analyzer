@@ -1,0 +1,145 @@
+{
+    "os": "Linux-5.15.0-69-generic-x86_64-with-glibc2.31",
+    "python": "3.10.9",
+    "heartbeatAt": "2023-05-04T11:14:54.245665",
+    "startedAt": "2023-05-04T11:14:53.666882",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/joowan/Desktop/face_pr/train_single_task.py",
+    "codePath": "train_single_task.py",
+    "git": {
+        "remote": "https://github.com/JuWanMaeng/crowd_status_analyzer.git",
+        "commit": "dd6d6196597aa51bd11c22bca36ac50e303b2341"
+    },
+    "email": "aodwndhks@gmail.com",
+    "root": "/home/joowan/Desktop/face_pr",
+    "host": "joowan",
+    "username": "joowan",
+    "executable": "/home/joowan/anaconda3/envs/torch/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2.3494000000000006,
+        "min": 800.0,
+        "max": 4580.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.603,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 4.585,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2.1,
+            "min": 800.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "total": 1832.2072448730469,
+        "used": 114.32682418823242
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.165756225585938
+    }
+}
