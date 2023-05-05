@@ -94,7 +94,7 @@ class ExpDataset(data.Dataset): # 칼라 이미지 감정 dataset (100,100)
         self.transform=transforms.Compose([
             transforms.Resize((128,128)),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
             ])
             
         
@@ -232,8 +232,8 @@ class AgeDataset(data.Dataset):  # UTKFace 에서 성별만 따로 뽑음
 
 
 if __name__ == '__main__':
-    tt=GenderDataset(phase='val')
+    tt=ExpDataset(phase='val')
     train_dataloader=DataLoader(tt,batch_size=32,num_workers=8,shuffle=True)
     for i in range(len(train_dataloader.dataset)):
-        print(tt[i][0].shape)
+        print(tt[i][0])
         break
