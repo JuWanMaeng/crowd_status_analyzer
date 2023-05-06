@@ -1,0 +1,212 @@
+device:cuda:2,backbone:resnet18
+total gender train data:71144
+total emotion train data:73437
+total age train data:80370
+total gender val data:13844
+total emotion val data:9180
+total age val data:10047
+total gender test data:9844
+total emotion test data:9176
+total age test data:10041
+************************************************************
+1/100 current_lr:0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:12<00:00,  7.69it/s]
+
+
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 23.64it/s]
+train: |                                        | 1/556 [00:01<09:16,  1.00s/it]
+Copied best model weights!
+train loss:3.1748, val loss:2.0517, val_gender_accuracy:85.98, val_emotion_accuracy:62.29, val_age_accuracy:68.49
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:11<00:00,  7.82it/s]
+
+
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 23.53it/s]
+train: |▍                                       | 6/556 [00:01<02:25,  3.79it/s]
+Copied best model weights!
+train loss:2.8388, val loss:1.9677, val_gender_accuracy:89.88, val_emotion_accuracy:62.66, val_age_accuracy:65.84
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:11<00:00,  7.80it/s]
+
+
+val: |███████████████████████████████████████▏| 141/144 [00:05<00:00, 23.81it/s]
+Copied best model weights!
+train loss:2.7399, val loss:1.8175, val_gender_accuracy:91.44, val_emotion_accuracy:65.48, val_age_accuracy:67.38
+************************************************************
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 23.58it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:11<00:00,  7.79it/s]
+
+
+
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 23.51it/s]
+Copied best model weights!
+train loss:2.6766, val loss:1.8002, val_gender_accuracy:92.52, val_emotion_accuracy:64.32, val_age_accuracy:70.33
+************************************************************
+5/100 current_lr:0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

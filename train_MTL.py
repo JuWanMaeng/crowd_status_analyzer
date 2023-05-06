@@ -11,17 +11,22 @@ from utils.loss import FocalLoss
 import copy
 import wandb,cv2,time
 import numpy as np
+import torch.optim.lr_scheduler as lr_scheduler
 
 from torchsummary import summary
 
 ###################################################################
 wandb.init(project='MultiTask',entity='kookmin_ai')
-device='cuda:0' if torch.cuda.is_available() else 'cpu'
+device='cuda:2' if torch.cuda.is_available() else 'cpu'
 backbone='resnet18'
 model=MultiTaskModel(phase='train')
+emo_weight=1
+gender_weight=1
+age_weight=1
+num_epochs=100
 ##################################################################
-model_name=f'weight/MTL/{backbone}_MTL.pt'
-wandb.run.name=(f'{backbone}')
+model_name=f'weight/MTL/{backbone}_MTL_step.pt'
+wandb.run.name=(f'{backbone}_step')
 print(f'device:{device},backbone:{backbone}')
 
 # build model
@@ -35,7 +40,8 @@ emotion_criterion = nn.CrossEntropyLoss()
 age_criterion=nn.CrossEntropyLoss()
 
 optimizer = optim.Adam(model.parameters(), lr=0.001)
-lr_scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=10)
+#scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=10)
+scheduler = lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.5)
 
 # Define dataloader
 train_gender_dataset=GenderDataset(phase='train')
@@ -89,13 +95,6 @@ total age test data:10041
 
 '''
 
-
-
-# Define the weights for each task loss
-emo_weight=1
-gender_weight=1
-age_weight=1
-num_epochs=1
 best_loss=1000
 
 
@@ -255,7 +254,7 @@ for epoch in range(num_epochs):
         torch.save(model.state_dict(),model_name)
         print('Copied best model weights!')
         
-    lr_scheduler.step(val_loss)
+    scheduler.step()
     if current_lr != get_lr(optimizer):
         print('Loading best model weights')
         model.load_state_dict(best_model_wts)
