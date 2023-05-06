@@ -31,24 +31,32 @@ class MultiTaskModel(nn.Module):
             #nn.BatchNorm1d(512),
             nn.Linear(512, 7)
         )
+        self.age_fc = nn.Sequential(
+            #nn.BatchNorm1d(1000),
+            nn.Linear(1000, 512),
+            nn.ReLU(),
+            #nn.BatchNorm1d(512),
+            nn.Linear(512, 4)
+        )
 
     def forward(self, x, task=None):  #['A_G', 'E_P']
         
         features=self.feature_extractor(x)
 
         if self.phase != 'test':
-            if task=='A_G':
+            if task=='gender':
                 gender_output=self.gender_fc(features)
-                gender=gender_output
-                return gender
-            
+                return gender_output
+            elif task=='age':
+                age_output=self.age_fc(features)
+                return age_output                
             else:
                 emo_output=self.emo_fc(features)
-                emo=emo_output
-                return emo
+                return emo_output
 
         else: # test mode
             gender=self.gender_fc(features)
             emo=self.emo_fc(features)
+            age=self.age_fc(features)
             
-            return gender,emo
+            return gender,emo,age
