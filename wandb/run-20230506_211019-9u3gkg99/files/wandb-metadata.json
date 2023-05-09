@@ -1,0 +1,237 @@
+{
+    "os": "Linux-5.4.0-137-generic-x86_64-with-glibc2.17",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-05-06T12:10:20.674594",
+    "startedAt": "2023-05-06T12:10:19.981655",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train_MTL.py",
+    "codePath": "train_MTL.py",
+    "git": {
+        "remote": "https://github.com/JuWanMaeng/crowd_status_analyzer.git",
+        "commit": "277ccc89292470e18093753d28f257f6a862de31"
+    },
+    "email": "aodwndhks@gmail.com",
+    "root": "/home/joowan/Desktop/face_pr",
+    "host": "user1",
+    "username": "joowan",
+    "executable": "/home/joowan/anaconda3/envs/face/bin/python",
+    "cpu_count": 18,
+    "cpu_count_logical": 36,
+    "cpu_freq": {
+        "current": 2.9403888888888883,
+        "min": 1200.0,
+        "max": 4633.333333333333
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.9,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2.053,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.2,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.381,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.651,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.616,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.546,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.642,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.563,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.688,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.63,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.668,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.576,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.657,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.429,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.224,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.844,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2.831,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2.398,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.777,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.199,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.487,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.8,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.686,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.322,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.669,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.499,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.692,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.686,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.477,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.91,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.709,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.33,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1.364,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.811,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2.939,
+            "min": 1200.0,
+            "max": 4700.0
+        }
+    ],
+    "disk": {
+        "total": 915.3232879638672,
+        "used": 503.0530319213867
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 62.49541091918945
+    }
+}

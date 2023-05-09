@@ -1,0 +1,382 @@
+2023-05-08 15:59:18,540 INFO    StreamThr :3988 [internal.py:wandb_internal():86] W&B internal server running at pid: 3988, started at: 2023-05-08 15:59:18.539436
+2023-05-08 15:59:18,549 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: status
+2023-05-08 15:59:18,553 INFO    WriterThread:3988 [datastore.py:open_for_write():85] open: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/run-i1hysyvl.wandb
+2023-05-08 15:59:18,554 DEBUG   SenderThread:3988 [sender.py:send():375] send: header
+2023-05-08 15:59:18,554 DEBUG   SenderThread:3988 [sender.py:send():375] send: run
+2023-05-08 15:59:19,083 INFO    SenderThread:3988 [dir_watcher.py:__init__():219] watching files in: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files
+2023-05-08 15:59:19,083 INFO    SenderThread:3988 [sender.py:_start_run_threads():1124] run started: i1hysyvl with start time 1683529157.602305
+2023-05-08 15:59:19,083 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: summary_record
+2023-05-08 15:59:19,083 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-08 15:59:19,088 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: check_version
+2023-05-08 15:59:19,089 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: check_version
+2023-05-08 15:59:19,147 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: run_start
+2023-05-08 15:59:19,148 DEBUG   HandlerThread:3988 [system_info.py:__init__():31] System info init
+2023-05-08 15:59:19,149 DEBUG   HandlerThread:3988 [system_info.py:__init__():46] System info init done
+2023-05-08 15:59:19,149 INFO    HandlerThread:3988 [system_monitor.py:start():181] Starting system monitor
+2023-05-08 15:59:19,149 INFO    SystemMonitor:3988 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-08 15:59:19,149 INFO    HandlerThread:3988 [system_monitor.py:probe():201] Collecting system info
+2023-05-08 15:59:19,150 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started cpu monitoring
+2023-05-08 15:59:19,150 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started disk monitoring
+2023-05-08 15:59:19,151 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started gpu monitoring
+2023-05-08 15:59:19,153 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started memory monitoring
+2023-05-08 15:59:19,154 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started network monitoring
+2023-05-08 15:59:19,186 DEBUG   HandlerThread:3988 [system_info.py:probe():195] Probing system
+2023-05-08 15:59:19,187 DEBUG   HandlerThread:3988 [system_info.py:_probe_git():180] Probing git
+2023-05-08 15:59:19,217 DEBUG   HandlerThread:3988 [system_info.py:_probe_git():188] Probing git done
+2023-05-08 15:59:19,217 DEBUG   HandlerThread:3988 [system_info.py:probe():240] Probing system done
+2023-05-08 15:59:19,218 DEBUG   HandlerThread:3988 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-137-generic-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2023-05-08T06:59:19.187051', 'startedAt': '2023-05-08T06:59:13.388555', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/JuWanMaeng/crowd_status_analyzer.git', 'commit': '277ccc89292470e18093753d28f257f6a862de31'}, 'email': 'aodwndhks@gmail.com', 'root': '/home/joowan/Desktop/face_pr', 'host': 'user1', 'username': 'joowan', 'executable': '/home/joowan/anaconda3/envs/face/bin/python', 'cpu_count': 18, 'cpu_count_logical': 36, 'cpu_freq': {'current': 1.91613888888889, 'min': 1200.0, 'max': 4633.333333333333}, 'cpu_freq_per_core': [{'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 1.392, 'min': 1200.0, 'max': 4600.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 3.661, 'min': 1200.0, 'max': 4800.0}, {'current': 1.355, 'min': 1200.0, 'max': 4700.0}, {'current': 3.615, 'min': 1200.0, 'max': 4800.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 3.593, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.587, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.829, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.494, 'min': 1200.0, 'max': 4700.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.199, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.427, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.616, 'min': 1200.0, 'max': 4800.0}, {'current': 1.354, 'min': 1200.0, 'max': 4700.0}, {'current': 3.587, 'min': 1200.0, 'max': 4800.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.571, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.581, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.802, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 1.524, 'min': 1200.0, 'max': 4700.0}], 'disk': {'total': 915.3232879638672, 'used': 503.6251220703125}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 62.49541091918945}}
+2023-05-08 15:59:19,218 INFO    HandlerThread:3988 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-08 15:59:19,218 INFO    HandlerThread:3988 [system_monitor.py:probe():214] Publishing system info
+2023-05-08 15:59:19,218 DEBUG   HandlerThread:3988 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-08 15:59:19,219 DEBUG   HandlerThread:3988 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-08 15:59:19,219 DEBUG   HandlerThread:3988 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-08 15:59:20,085 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/requirements.txt
+2023-05-08 15:59:20,085 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/conda-environment.yaml
+2023-05-08 15:59:20,085 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-summary.json
+2023-05-08 15:59:20,857 DEBUG   HandlerThread:3988 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-08 15:59:20,859 INFO    HandlerThread:3988 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-08 15:59:20,860 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:20,861 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-08 15:59:20,872 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-08 15:59:20,873 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: stop_status
+2023-05-08 15:59:21,088 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/conda-environment.yaml
+2023-05-08 15:59:21,089 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-metadata.json
+2023-05-08 15:59:21,143 DEBUG   SenderThread:3988 [sender.py:send():375] send: telemetry
+2023-05-08 15:59:21,144 DEBUG   SenderThread:3988 [sender.py:send():375] send: telemetry
+2023-05-08 15:59:21,144 DEBUG   SenderThread:3988 [sender.py:send():375] send: run
+2023-05-08 15:59:21,397 INFO    SenderThread:3988 [sender.py:send_run():1002] updated run: i1hysyvl
+2023-05-08 15:59:21,398 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,398 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_1c7ede54044af12096d1.png with policy now
+2023-05-08 15:59:21,398 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,398 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_2d7ef9a69bda16476c89.png with policy now
+2023-05-08 15:59:21,398 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,398 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_d9c3a7fbf7754aea8da0.png with policy now
+2023-05-08 15:59:21,398 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,398 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_c21f7ec1f666796a2ad6.png with policy now
+2023-05-08 15:59:21,399 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,399 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_aaf7ba237ffda88f7062.png with policy now
+2023-05-08 15:59:21,399 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,399 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_9ee778386799859e7c8c.png with policy now
+2023-05-08 15:59:21,399 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,402 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_63ef66d622e626830db9.png with policy now
+2023-05-08 15:59:21,403 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,403 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_af570c4892971d384d78.png with policy now
+2023-05-08 15:59:21,403 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,403 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_b39fac8ae3b6c3a6ab42.png with policy now
+2023-05-08 15:59:21,403 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,404 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_f6044fccbd45ff092ef4.png with policy now
+2023-05-08 15:59:21,404 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,404 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_3a846c95ed1cad48ed73.png with policy now
+2023-05-08 15:59:21,404 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,404 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_ff6180355d65331707b3.png with policy now
+2023-05-08 15:59:21,404 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,404 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_ae91af50f348cd828f09.png with policy now
+2023-05-08 15:59:21,407 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,407 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_95c61c4c4eac32691c41.png with policy now
+2023-05-08 15:59:21,407 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,408 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_cfe3d297891688a92a0b.png with policy now
+2023-05-08 15:59:21,408 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,408 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_5e5b03753fda34476979.png with policy now
+2023-05-08 15:59:21,408 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,408 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_2644f7971817295229c2.png with policy now
+2023-05-08 15:59:21,408 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,408 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_288f4ed3807dbb9c7926.png with policy now
+2023-05-08 15:59:21,409 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,409 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_5742abaf69149fd22976.png with policy now
+2023-05-08 15:59:21,409 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,409 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_292b51eac28120e9d78d.png with policy now
+2023-05-08 15:59:21,472 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,472 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_20adb45be3af8d0d64cc.png with policy now
+2023-05-08 15:59:21,474 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-08 15:59:21,479 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: pause
+2023-05-08 15:59:21,481 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,481 INFO    HandlerThread:3988 [handler.py:handle_request_pause():719] stopping system metrics thread or process
+2023-05-08 15:59:21,483 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_141d747fce6e26f1dd7b.png with policy now
+2023-05-08 15:59:21,486 INFO    HandlerThread:3988 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-08 15:59:21,491 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,491 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-08 15:59:21,494 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_c10f16be1e46912ed3df.png with policy now
+2023-05-08 15:59:21,494 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-08 15:59:21,498 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-08 15:59:21,499 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,499 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined disk monitor
+2023-05-08 15:59:21,502 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-08 15:59:21,502 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_d60caad5ebfdd2b20283.png with policy now
+2023-05-08 15:59:21,511 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,511 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_03a47a906041bedaeffd.png with policy now
+2023-05-08 15:59:21,514 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,514 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_1b8588af00418e06de80.png with policy now
+2023-05-08 15:59:21,517 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,517 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_ff6180355d65331707b3.png with policy now
+2023-05-08 15:59:21,517 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,518 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_2c6e3cf842aea645d7d8.png with policy now
+2023-05-08 15:59:21,518 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,518 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_4813fc557872e0da86c2.png with policy now
+2023-05-08 15:59:21,518 DEBUG   SenderThread:3988 [sender.py:send():375] send: files
+2023-05-08 15:59:21,518 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file media/images/Image_0_58073352361c55e978e8.png with policy now
+2023-05-08 15:59:21,521 DEBUG   SenderThread:3988 [sender.py:send():375] send: history
+2023-05-08 15:59:21,522 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: summary_record
+2023-05-08 15:59:21,523 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-08 15:59:21,662 INFO    wandb-upload_0:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/uer0ov7i-wandb-metadata.json
+2023-05-08 15:59:22,090 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-summary.json
+2023-05-08 15:59:22,091 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/config.yaml
+2023-05-08 15:59:22,091 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_95c61c4c4eac32691c41.png
+2023-05-08 15:59:22,092 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2c6e3cf842aea645d7d8.png
+2023-05-08 15:59:22,092 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_20adb45be3af8d0d64cc.png
+2023-05-08 15:59:22,093 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_141d747fce6e26f1dd7b.png
+2023-05-08 15:59:22,093 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_292b51eac28120e9d78d.png
+2023-05-08 15:59:22,094 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_aaf7ba237ffda88f7062.png
+2023-05-08 15:59:22,094 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_b39fac8ae3b6c3a6ab42.png
+2023-05-08 15:59:22,095 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_f6044fccbd45ff092ef4.png
+2023-05-08 15:59:22,095 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_3a846c95ed1cad48ed73.png
+2023-05-08 15:59:22,095 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_5742abaf69149fd22976.png
+2023-05-08 15:59:22,096 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_03a47a906041bedaeffd.png
+2023-05-08 15:59:22,096 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_9ee778386799859e7c8c.png
+2023-05-08 15:59:22,097 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_c21f7ec1f666796a2ad6.png
+2023-05-08 15:59:22,098 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_288f4ed3807dbb9c7926.png
+2023-05-08 15:59:22,098 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2d7ef9a69bda16476c89.png
+2023-05-08 15:59:22,099 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_63ef66d622e626830db9.png
+2023-05-08 15:59:22,099 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_cfe3d297891688a92a0b.png
+2023-05-08 15:59:22,100 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_ae91af50f348cd828f09.png
+2023-05-08 15:59:22,100 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_af570c4892971d384d78.png
+2023-05-08 15:59:22,101 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_1b8588af00418e06de80.png
+2023-05-08 15:59:22,101 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_58073352361c55e978e8.png
+2023-05-08 15:59:22,102 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_ff6180355d65331707b3.png
+2023-05-08 15:59:22,102 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_5e5b03753fda34476979.png
+2023-05-08 15:59:22,103 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2644f7971817295229c2.png
+2023-05-08 15:59:22,103 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_1c7ede54044af12096d1.png
+2023-05-08 15:59:22,104 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_4813fc557872e0da86c2.png
+2023-05-08 15:59:22,104 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_c10f16be1e46912ed3df.png
+2023-05-08 15:59:22,105 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_d60caad5ebfdd2b20283.png
+2023-05-08 15:59:22,105 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_d9c3a7fbf7754aea8da0.png
+2023-05-08 15:59:22,106 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media
+2023-05-08 15:59:22,106 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images
+2023-05-08 15:59:22,121 INFO    wandb-upload_1:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/ibe08jy1-media/images/Image_0_1c7ede54044af12096d1.png
+2023-05-08 15:59:22,143 INFO    wandb-upload_2:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/f1q32iat-media/images/Image_0_2d7ef9a69bda16476c89.png
+2023-05-08 15:59:22,250 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-08 15:59:22,252 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined memory monitor
+2023-05-08 15:59:22,252 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined network monitor
+2023-05-08 15:59:22,253 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: resume
+2023-05-08 15:59:22,253 INFO    HandlerThread:3988 [handler.py:handle_request_resume():710] starting system metrics thread or process
+2023-05-08 15:59:22,253 INFO    HandlerThread:3988 [system_monitor.py:start():181] Starting system monitor
+2023-05-08 15:59:22,253 DEBUG   SenderThread:3988 [sender.py:send():375] send: stats
+2023-05-08 15:59:22,259 INFO    SystemMonitor:3988 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-08 15:59:22,261 DEBUG   SenderThread:3988 [sender.py:send():375] send: telemetry
+2023-05-08 15:59:22,261 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started cpu monitoring
+2023-05-08 15:59:22,261 DEBUG   SenderThread:3988 [sender.py:send():375] send: exit
+2023-05-08 15:59:22,261 INFO    SenderThread:3988 [sender.py:send_exit():598] handling exit code: 0
+2023-05-08 15:59:22,262 INFO    SenderThread:3988 [sender.py:send_exit():600] handling runtime: 3
+2023-05-08 15:59:22,262 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started disk monitoring
+2023-05-08 15:59:22,264 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-08 15:59:22,264 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started gpu monitoring
+2023-05-08 15:59:22,264 INFO    SenderThread:3988 [sender.py:send_exit():606] send defer
+2023-05-08 15:59:22,265 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started memory monitoring
+2023-05-08 15:59:22,265 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,266 INFO    SystemMonitor:3988 [interfaces.py:start():190] Started network monitoring
+2023-05-08 15:59:22,266 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-08 15:59:22,267 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,267 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-08 15:59:22,267 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 1
+2023-05-08 15:59:22,268 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,268 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-08 15:59:22,268 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,269 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-08 15:59:22,269 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 2
+2023-05-08 15:59:22,269 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,269 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-08 15:59:22,269 INFO    HandlerThread:3988 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-08 15:59:22,270 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-08 15:59:22,270 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-08 15:59:22,270 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-08 15:59:22,270 DEBUG   SystemMonitor:3988 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-08 15:59:22,271 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined disk monitor
+2023-05-08 15:59:22,294 INFO    wandb-upload_21:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/z9l8aw9d-media/images/Image_0_20adb45be3af8d0d64cc.png
+2023-05-08 15:59:22,333 INFO    wandb-upload_18:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/v8gt6x1d-media/images/Image_0_288f4ed3807dbb9c7926.png
+2023-05-08 15:59:22,363 INFO    wandb-upload_6:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/sxv2a5vk-media/images/Image_0_9ee778386799859e7c8c.png
+2023-05-08 15:59:22,366 INFO    wandb-upload_8:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/qs8oj263-media/images/Image_0_af570c4892971d384d78.png
+2023-05-08 15:59:22,376 INFO    wandb-upload_7:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/b43jg2vn-media/images/Image_0_63ef66d622e626830db9.png
+2023-05-08 15:59:22,398 INFO    wandb-upload_20:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/woixhoc5-media/images/Image_0_292b51eac28120e9d78d.png
+2023-05-08 15:59:22,400 INFO    wandb-upload_15:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/9afohbz3-media/images/Image_0_cfe3d297891688a92a0b.png
+2023-05-08 15:59:22,406 INFO    wandb-upload_11:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/arwnimhn-media/images/Image_0_3a846c95ed1cad48ed73.png
+2023-05-08 15:59:22,414 INFO    wandb-upload_12:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/za2wzd45-media/images/Image_0_ff6180355d65331707b3.png
+2023-05-08 15:59:22,423 INFO    wandb-upload_19:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/uix97eh8-media/images/Image_0_5742abaf69149fd22976.png
+2023-05-08 15:59:22,426 INFO    wandb-upload_17:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/ssayze0j-media/images/Image_0_2644f7971817295229c2.png
+2023-05-08 15:59:22,448 INFO    wandb-upload_14:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/lgzlwr80-media/images/Image_0_95c61c4c4eac32691c41.png
+2023-05-08 15:59:22,459 INFO    wandb-upload_13:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/98pon865-media/images/Image_0_ae91af50f348cd828f09.png
+2023-05-08 15:59:22,468 INFO    wandb-upload_16:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/bl8pfhl4-media/images/Image_0_5e5b03753fda34476979.png
+2023-05-08 15:59:22,476 INFO    wandb-upload_24:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/aki05q4k-media/images/Image_0_d60caad5ebfdd2b20283.png
+2023-05-08 15:59:22,490 INFO    wandb-upload_4:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/gzmu422k-media/images/Image_0_c21f7ec1f666796a2ad6.png
+2023-05-08 15:59:22,500 INFO    wandb-upload_22:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/389ceb9j-media/images/Image_0_141d747fce6e26f1dd7b.png
+2023-05-08 15:59:22,503 INFO    wandb-upload_5:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/xd9ms0pb-media/images/Image_0_aaf7ba237ffda88f7062.png
+2023-05-08 15:59:22,537 INFO    wandb-upload_10:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/361dro2l-media/images/Image_0_f6044fccbd45ff092ef4.png
+2023-05-08 15:59:22,542 INFO    wandb-upload_9:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/bh377hdo-media/images/Image_0_b39fac8ae3b6c3a6ab42.png
+2023-05-08 15:59:22,544 INFO    wandb-upload_25:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/qti20epl-media/images/Image_0_03a47a906041bedaeffd.png
+2023-05-08 15:59:22,552 INFO    wandb-upload_28:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/i2new07b-media/images/Image_0_4813fc557872e0da86c2.png
+2023-05-08 15:59:22,566 INFO    wandb-upload_27:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/h4419jpb-media/images/Image_0_2c6e3cf842aea645d7d8.png
+2023-05-08 15:59:22,574 INFO    wandb-upload_23:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/qwj0b0v6-media/images/Image_0_c10f16be1e46912ed3df.png
+2023-05-08 15:59:22,589 INFO    wandb-upload_26:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/g1t6tx9i-media/images/Image_0_1b8588af00418e06de80.png
+2023-05-08 15:59:22,591 INFO    wandb-upload_3:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/yxfqz0e1-media/images/Image_0_d9c3a7fbf7754aea8da0.png
+2023-05-08 15:59:22,603 INFO    wandb-upload_29:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/vq9pa0pd-media/images/Image_0_58073352361c55e978e8.png
+2023-05-08 15:59:22,929 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-08 15:59:22,929 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined memory monitor
+2023-05-08 15:59:22,929 INFO    HandlerThread:3988 [interfaces.py:finish():202] Joined network monitor
+2023-05-08 15:59:22,930 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-08 15:59:22,930 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,931 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-08 15:59:22,931 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 3
+2023-05-08 15:59:22,931 DEBUG   SenderThread:3988 [sender.py:send():375] send: stats
+2023-05-08 15:59:22,931 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,932 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: poll_exit
+2023-05-08 15:59:22,932 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-08 15:59:22,933 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,933 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-08 15:59:22,934 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 4
+2023-05-08 15:59:22,934 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,934 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-08 15:59:22,934 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,934 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-08 15:59:22,934 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 5
+2023-05-08 15:59:22,934 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,934 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-08 15:59:22,935 DEBUG   SenderThread:3988 [sender.py:send():375] send: summary
+2023-05-08 15:59:22,936 INFO    SenderThread:3988 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-08 15:59:22,936 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,936 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-08 15:59:22,936 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 6
+2023-05-08 15:59:22,936 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:22,936 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-08 15:59:22,937 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:22,937 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-08 15:59:22,942 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: status_report
+2023-05-08 15:59:23,035 INFO    wandb-upload_0:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/w31lva7g-media/images/Image_0_20adb45be3af8d0d64cc.png
+2023-05-08 15:59:23,073 INFO    wandb-upload_18:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/i5jui50e-media/images/Image_0_9ee778386799859e7c8c.png
+2023-05-08 15:59:23,086 INFO    wandb-upload_2:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/5hxnpvvi-media/images/Image_0_3a846c95ed1cad48ed73.png
+2023-05-08 15:59:23,094 INFO    wandb-upload_6:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/xvnxyrz7-media/images/Image_0_288f4ed3807dbb9c7926.png
+2023-05-08 15:59:23,102 INFO    Thread-61 :3988 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-summary.json
+2023-05-08 15:59:23,121 INFO    wandb-upload_15:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/jzm5annj-media/images/Image_0_63ef66d622e626830db9.png
+2023-05-08 15:59:23,133 INFO    wandb-upload_19:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/kuf7v218-media/images/Image_0_ae91af50f348cd828f09.png
+2023-05-08 15:59:23,177 INFO    wandb-upload_14:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/srhfqf4x-media/images/Image_0_ff6180355d65331707b3.png
+2023-05-08 15:59:23,183 INFO    wandb-upload_8:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/cv0n5igz-media/images/Image_0_5e5b03753fda34476979.png
+2023-05-08 15:59:23,191 INFO    wandb-upload_21:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/7wuvvtaf-media/images/Image_0_cfe3d297891688a92a0b.png
+2023-05-08 15:59:23,198 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 7
+2023-05-08 15:59:23,198 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:23,199 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-08 15:59:23,199 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:23,199 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-08 15:59:23,199 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 8
+2023-05-08 15:59:23,199 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:23,199 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-08 15:59:23,200 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:23,200 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-08 15:59:23,200 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 9
+2023-05-08 15:59:23,200 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:23,201 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-08 15:59:23,201 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:23,201 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-08 15:59:23,201 INFO    SenderThread:3988 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-08 15:59:23,205 INFO    wandb-upload_7:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/iovh2uiw-media/images/Image_0_2d7ef9a69bda16476c89.png
+2023-05-08 15:59:23,213 INFO    wandb-upload_17:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/0g3aj558-media/images/Image_0_af570c4892971d384d78.png
+2023-05-08 15:59:23,371 INFO    wandb-upload_20:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/ld5nrp3n-media/images/Image_0_2644f7971817295229c2.png
+2023-05-08 15:59:23,378 INFO    wandb-upload_11:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/x8rqrxww-media/images/Image_0_1c7ede54044af12096d1.png
+2023-05-08 15:59:23,538 INFO    wandb-upload_12:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/fpu0kp6k-media/images/Image_0_4813fc557872e0da86c2.png
+2023-05-08 15:59:23,720 INFO    wandb-upload_25:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/1bg6v1te-media/images/Image_0_d9c3a7fbf7754aea8da0.png
+2023-05-08 15:59:23,737 INFO    wandb-upload_27:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/jloe8kuv-media/images/Image_0_2c6e3cf842aea645d7d8.png
+2023-05-08 15:59:23,762 INFO    wandb-upload_28:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/vyjuj198-media/images/Image_0_95c61c4c4eac32691c41.png
+2023-05-08 15:59:23,764 INFO    wandb-upload_10:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/1dn1jxhf-media/images/Image_0_d60caad5ebfdd2b20283.png
+2023-05-08 15:59:23,786 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-08 15:59:23,807 INFO    wandb-upload_26:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/p4p09rx4-media/images/Image_0_292b51eac28120e9d78d.png
+2023-05-08 15:59:23,843 INFO    wandb-upload_23:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/85ixg3ap-media/images/Image_0_141d747fce6e26f1dd7b.png
+2023-05-08 15:59:23,876 INFO    wandb-upload_9:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/wa6cb3zz-media/images/Image_0_f6044fccbd45ff092ef4.png
+2023-05-08 15:59:23,896 INFO    wandb-upload_22:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/1snzxgcw-media/images/Image_0_aaf7ba237ffda88f7062.png
+2023-05-08 15:59:23,901 INFO    wandb-upload_1:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/k3klv6e9-media/images/Image_0_b39fac8ae3b6c3a6ab42.png
+2023-05-08 15:59:23,903 INFO    wandb-upload_13:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/rqg9snkq-media/images/Image_0_5742abaf69149fd22976.png
+2023-05-08 15:59:23,938 INFO    wandb-upload_16:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/8yymwb26-media/images/Image_0_03a47a906041bedaeffd.png
+2023-05-08 15:59:23,969 INFO    wandb-upload_5:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/gszgoz7a-media/images/Image_0_c10f16be1e46912ed3df.png
+2023-05-08 15:59:24,086 INFO    wandb-upload_4:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/nxsdtfhr-media/images/Image_0_1b8588af00418e06de80.png
+2023-05-08 15:59:24,104 INFO    SenderThread:3988 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/config.yaml
+2023-05-08 15:59:24,104 INFO    SenderThread:3988 [dir_watcher.py:finish():395] scan: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files
+2023-05-08 15:59:24,105 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/config.yaml config.yaml
+2023-05-08 15:59:24,105 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-metadata.json wandb-metadata.json
+2023-05-08 15:59:24,105 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-summary.json wandb-summary.json
+2023-05-08 15:59:24,111 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/requirements.txt requirements.txt
+2023-05-08 15:59:24,112 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/conda-environment.yaml conda-environment.yaml
+2023-05-08 15:59:24,128 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_5e5b03753fda34476979.png media/images/Image_0_5e5b03753fda34476979.png
+2023-05-08 15:59:24,128 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_f6044fccbd45ff092ef4.png media/images/Image_0_f6044fccbd45ff092ef4.png
+2023-05-08 15:59:24,128 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_ff6180355d65331707b3.png media/images/Image_0_ff6180355d65331707b3.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_aaf7ba237ffda88f7062.png media/images/Image_0_aaf7ba237ffda88f7062.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_95c61c4c4eac32691c41.png media/images/Image_0_95c61c4c4eac32691c41.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_d60caad5ebfdd2b20283.png media/images/Image_0_d60caad5ebfdd2b20283.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_58073352361c55e978e8.png media/images/Image_0_58073352361c55e978e8.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_03a47a906041bedaeffd.png media/images/Image_0_03a47a906041bedaeffd.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_141d747fce6e26f1dd7b.png media/images/Image_0_141d747fce6e26f1dd7b.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_ae91af50f348cd828f09.png media/images/Image_0_ae91af50f348cd828f09.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_63ef66d622e626830db9.png media/images/Image_0_63ef66d622e626830db9.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_cfe3d297891688a92a0b.png media/images/Image_0_cfe3d297891688a92a0b.png
+2023-05-08 15:59:24,129 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_c21f7ec1f666796a2ad6.png media/images/Image_0_c21f7ec1f666796a2ad6.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_af570c4892971d384d78.png media/images/Image_0_af570c4892971d384d78.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_c10f16be1e46912ed3df.png media/images/Image_0_c10f16be1e46912ed3df.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_4813fc557872e0da86c2.png media/images/Image_0_4813fc557872e0da86c2.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_9ee778386799859e7c8c.png media/images/Image_0_9ee778386799859e7c8c.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_288f4ed3807dbb9c7926.png media/images/Image_0_288f4ed3807dbb9c7926.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_3a846c95ed1cad48ed73.png media/images/Image_0_3a846c95ed1cad48ed73.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_1b8588af00418e06de80.png media/images/Image_0_1b8588af00418e06de80.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_b39fac8ae3b6c3a6ab42.png media/images/Image_0_b39fac8ae3b6c3a6ab42.png
+2023-05-08 15:59:24,130 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2d7ef9a69bda16476c89.png media/images/Image_0_2d7ef9a69bda16476c89.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_292b51eac28120e9d78d.png media/images/Image_0_292b51eac28120e9d78d.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_5742abaf69149fd22976.png media/images/Image_0_5742abaf69149fd22976.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_20adb45be3af8d0d64cc.png media/images/Image_0_20adb45be3af8d0d64cc.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2c6e3cf842aea645d7d8.png media/images/Image_0_2c6e3cf842aea645d7d8.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_2644f7971817295229c2.png media/images/Image_0_2644f7971817295229c2.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_1c7ede54044af12096d1.png media/images/Image_0_1c7ede54044af12096d1.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/media/images/Image_0_d9c3a7fbf7754aea8da0.png media/images/Image_0_d9c3a7fbf7754aea8da0.png
+2023-05-08 15:59:24,131 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 10
+2023-05-08 15:59:24,132 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: poll_exit
+2023-05-08 15:59:24,132 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:24,132 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-08 15:59:24,133 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:24,133 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-08 15:59:24,133 INFO    SenderThread:3988 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-08 15:59:24,163 INFO    wandb-upload_24:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/mbptvlgb-media/images/Image_0_c21f7ec1f666796a2ad6.png
+2023-05-08 15:59:24,237 INFO    wandb-upload_3:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/8srdvafw-media/images/Image_0_58073352361c55e978e8.png
+2023-05-08 15:59:24,397 INFO    wandb-upload_29:3988 [upload_job.py:push():137] Uploaded file /tmp/tmph0e4ekxpwandb/oybkh7t1-media/images/Image_0_ff6180355d65331707b3.png
+2023-05-08 15:59:24,747 INFO    wandb-upload_2:3988 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/requirements.txt
+2023-05-08 15:59:24,747 INFO    wandb-upload_0:3988 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/config.yaml
+2023-05-08 15:59:24,787 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-08 15:59:24,789 INFO    wandb-upload_6:3988 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/conda-environment.yaml
+2023-05-08 15:59:24,789 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: poll_exit
+2023-05-08 15:59:25,232 INFO    wandb-upload_18:3988 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/files/wandb-summary.json
+2023-05-08 15:59:25,433 INFO    Thread-60 :3988 [sender.py:transition_state():626] send defer: 11
+2023-05-08 15:59:25,433 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:25,433 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-08 15:59:25,434 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:25,434 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-08 15:59:25,435 INFO    SenderThread:3988 [file_pusher.py:join():173] waiting for file pusher
+2023-05-08 15:59:25,435 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 12
+2023-05-08 15:59:25,435 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:25,435 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-08 15:59:25,436 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:25,436 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-08 15:59:25,677 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 13
+2023-05-08 15:59:25,677 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:25,677 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-08 15:59:25,678 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:25,678 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-08 15:59:25,678 INFO    SenderThread:3988 [sender.py:transition_state():626] send defer: 14
+2023-05-08 15:59:25,678 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: defer
+2023-05-08 15:59:25,679 DEBUG   SenderThread:3988 [sender.py:send():375] send: final
+2023-05-08 15:59:25,679 INFO    HandlerThread:3988 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-08 15:59:25,679 DEBUG   SenderThread:3988 [sender.py:send():375] send: footer
+2023-05-08 15:59:25,679 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: defer
+2023-05-08 15:59:25,679 INFO    SenderThread:3988 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-08 15:59:25,680 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-08 15:59:25,681 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: server_info
+2023-05-08 15:59:25,681 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-08 15:59:25,681 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: poll_exit
+2023-05-08 15:59:25,682 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-08 15:59:25,682 DEBUG   SenderThread:3988 [sender.py:send_request():402] send_request: server_info
+2023-05-08 15:59:26,648 DEBUG   HandlerThread:3988 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-08 15:59:26,648 INFO    HandlerThread:3988 [handler.py:finish():845] shutting down handler
+2023-05-08 15:59:26,682 INFO    WriterThread:3988 [datastore.py:close():298] close: /home/joowan/Desktop/face_pr/wandb/run-20230508_155913-i1hysyvl/run-i1hysyvl.wandb
+2023-05-08 15:59:27,647 INFO    SenderThread:3988 [sender.py:finish():1550] shutting down sender
+2023-05-08 15:59:27,647 INFO    SenderThread:3988 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-08 15:59:27,647 INFO    SenderThread:3988 [file_pusher.py:join():173] waiting for file pusher

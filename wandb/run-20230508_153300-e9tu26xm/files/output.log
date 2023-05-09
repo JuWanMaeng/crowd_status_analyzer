@@ -1,0 +1,17 @@
+device:cuda:0,backbone:resnet18
+total gender train data:71144
+total emotion train data:73437
+total age train data:80370
+total gender val data:13844
+total emotion val data:9180
+total age val data:10047
+total gender test data:9844
+total emotion test data:9176
+total age test data:10041
+************************************************************
+1/100 current_lr:0.001
+train: |                                                | 0/556 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "train_MTL.py", line 152, in <module>
+    common_loss = gender_weight * gender_loss +emo_loss + age_weight * age_loss
+TypeError: unsupported operand type(s) for +: 'Tensor' and 'FocalLoss'

@@ -1,0 +1,38 @@
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Configure stats pid to 18192
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Loading settings from /home/joowan/.config/wandb/settings
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Loading settings from /home/joowan/Desktop/face_pr/wandb/settings
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train_MTL.py', 'program': 'train_MTL.py'}
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_init.py:_log_setup():507] Logging user logs to /home/joowan/Desktop/face_pr/wandb/run-20230508_153007-q89jdrhn/logs/debug.log
+2023-05-08 15:30:07,065 INFO    MainThread:18192 [wandb_init.py:_log_setup():508] Logging internal logs to /home/joowan/Desktop/face_pr/wandb/run-20230508_153007-q89jdrhn/logs/debug-internal.log
+2023-05-08 15:30:07,066 INFO    MainThread:18192 [wandb_init.py:init():547] calling init triggers
+2023-05-08 15:30:07,066 INFO    MainThread:18192 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-05-08 15:30:07,066 INFO    MainThread:18192 [wandb_init.py:init():595] starting backend
+2023-05-08 15:30:07,066 INFO    MainThread:18192 [wandb_init.py:init():599] setting up manager
+2023-05-08 15:30:07,072 INFO    MainThread:18192 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-08 15:30:07,079 INFO    MainThread:18192 [wandb_init.py:init():605] backend started and connected
+2023-05-08 15:30:07,084 INFO    MainThread:18192 [wandb_init.py:init():695] updated telemetry
+2023-05-08 15:30:07,104 INFO    MainThread:18192 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-05-08 15:30:07,856 INFO    MainThread:18192 [wandb_run.py:_on_init():2176] communicating current version
+2023-05-08 15:30:08,040 INFO    MainThread:18192 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.15.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-08 15:30:08,041 INFO    MainThread:18192 [wandb_init.py:init():782] starting run threads in backend
+2023-05-08 15:30:08,054 WARNING MainThread:18192 [wandb_init.py:init():1167] interrupted
+Traceback (most recent call last):
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1145, in init
+    run = wi.init()
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 794, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

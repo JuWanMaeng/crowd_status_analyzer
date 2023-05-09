@@ -1,0 +1,2 @@
+
+tensor([[1]], device='cuda:3')

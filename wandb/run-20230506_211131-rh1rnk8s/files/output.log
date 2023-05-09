@@ -1,0 +1,135 @@
+device:cuda:1,backbone:resnet18
+total gender train data:71144
+total emotion train data:73437
+total age train data:80370
+total gender val data:13844
+total emotion val data:9180
+total age val data:10047
+total gender test data:9844
+total emotion test data:9176
+total age test data:10041
+************************************************************
+1/100 current_lr:0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:25<00:00,  6.47it/s]
+
+
+
+
+val: |████████████████████████████████████████| 144/144 [00:10<00:00, 13.46it/s]
+train: |                                                | 0/556 [00:00<?, ?it/s]
+Copied best model weights!
+train loss:1.6474, val loss:2.1215, val_gender_accuracy:85.75, val_emotion_accuracy:57.19, val_age_accuracy:68.09
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:39<00:00,  5.61it/s]
+
+
+
+
+val: |████████████████████████████████████████| 144/144 [00:10<00:00, 14.20it/s]
+train: |                                                | 0/556 [00:00<?, ?it/s]
+Copied best model weights!
+train loss:1.4520, val loss:2.0556, val_gender_accuracy:87.09, val_emotion_accuracy:61.60, val_age_accuracy:67.39
+************************************************************
+
+
+
+train: |█▉                                     | 27/556 [00:06<02:12,  4.00it/s]
+Traceback (most recent call last):
+  File "train_MTL.py", line 154, in <module>
+    common_loss.backward(retain_graph=True)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

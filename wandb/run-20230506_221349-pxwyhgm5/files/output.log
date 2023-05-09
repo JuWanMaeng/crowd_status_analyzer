@@ -1,0 +1,104 @@
+device:cuda:1,backbone:resnet18
+total gender train data:71144
+total emotion train data:73437
+total age train data:80370
+total gender val data:13844
+total emotion val data:9180
+total age val data:10047
+total gender test data:9844
+total emotion test data:9176
+total age test data:10041
+************************************************************
+1/100 current_lr:0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:12<00:00,  7.66it/s]
+
+
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 22.84it/s]
+train: |                                                | 0/556 [00:00<?, ?it/s]
+Copied best model weights!
+train loss:4.0148, val loss:3.7876, val_gender_accuracy:58.16, val_emotion_accuracy:62.79, val_age_accuracy:66.91
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 556/556 [01:11<00:00,  7.80it/s]
+
+
+val: |████████████████████████████████████████| 144/144 [00:06<00:00, 23.31it/s]
+train: |                                                | 0/556 [00:00<?, ?it/s]
+Copied best model weights!
+train loss:3.4464, val loss:3.4637, val_gender_accuracy:60.20, val_emotion_accuracy:64.40, val_age_accuracy:68.67
+************************************************************
+
+train: |█▉                                     | 28/556 [00:04<01:28,  5.98it/s]
+Traceback (most recent call last):
+  File "train_MTL.py", line 159, in <module>
+    train_gender_loss+=gender_loss.item()
+KeyboardInterrupt

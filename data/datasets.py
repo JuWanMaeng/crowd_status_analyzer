@@ -181,5 +181,5 @@ if __name__ == '__main__':
     tt=EmotionDataset(phase='val')
     train_dataloader=DataLoader(tt,batch_size=32,num_workers=8,shuffle=True)
     for i in range(len(train_dataloader.dataset)):
-        print(tt[i][0])
+        print(tt[i][0].shape)
         break

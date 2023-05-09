@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from MTL.model.MTL_model import MultiTaskModel
+from MTL.model.MTL_model import MultiTaskModel,MultiTaskModel_eff1
 from data.datasets import EmotionDataset,GenderDataset,AgeDataset
 from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import ReduceLROnPlateau
@@ -17,20 +17,17 @@ from torchsummary import summary
 
 ###################################################################
 wandb.init(project='MultiTask',entity='kookmin_ai')
-device='cuda:2' if torch.cuda.is_available() else 'cpu'
-backbone='resnet18'
-model=MultiTaskModel(phase='train')
-emo_weight=1
+device='cuda:1' if torch.cuda.is_available() else 'cpu'
+backbone='effb1'
+model=MultiTaskModel_eff1(phase='train')
+emo_weight=2
 gender_weight=1
-age_weight=1
+age_weight=2
 num_epochs=100
 ##################################################################
-model_name=f'weight/MTL/{backbone}_MTL_step.pt'
-wandb.run.name=(f'{backbone}_step')
+model_name=f'weight/MTL/{backbone}_MTL_{emo_weight}{gender_weight}{age_weight}.pt'
+wandb.run.name=(f'{backbone}_{emo_weight}{gender_weight}{age_weight}')
 print(f'device:{device},backbone:{backbone}')
-
-# build model
-model=MultiTaskModel(phase='train')
 model.to(device)
 
 # Define the loss functions for each task
@@ -41,7 +38,7 @@ age_criterion=nn.CrossEntropyLoss()
 
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 #scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=10)
-scheduler = lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.5)
+scheduler = lr_scheduler.StepLR(optimizer, step_size=15, gamma=0.5)
 
 # Define dataloader
 train_gender_dataset=GenderDataset(phase='train')
@@ -149,9 +146,9 @@ for epoch in range(num_epochs):
   
   
         # Compute the total loss
-        common_loss = gender_weight * gender_loss+ emo_weight*emo_loss + age_weight + age_loss
+        common_loss = gender_weight * gender_loss + emo_weight*emo_loss + age_weight * age_loss
         common_loss_value=common_loss.item()
-        common_loss.backward(retain_graph=True)
+        common_loss.backward()
         optimizer.step()
         
         # 각각의 total loss 저장
@@ -164,7 +161,7 @@ for epoch in range(num_epochs):
     train_loss = train_total_loss/len(train_gender_loader)
     train_gender_loss = train_gender_loss/len(train_gender_loader)
     train_emotoin_loss = train_emotion_loss/len(train_gender_loader)
-    train_age_loss=train_age_loss/len(train_age_loader)   
+    train_age_loss=train_age_loss/len(train_gender_loader)   
     # epoch 당 각각의 accuracy
     train_gender_accuracy=gender_corrects/len(train_gender_loader.dataset) * 100
     train_emotion_accuracy=emo_corrects/len(train_gender_loader.dataset) * 100
@@ -213,7 +210,7 @@ for epoch in range(num_epochs):
  
     
             # Compute the total loss
-            val_loss = gender_loss + emo_loss + age_loss
+            val_loss = gender_weight * gender_loss+ emo_weight*emo_loss + age_weight * age_loss
             val_total_loss+=val_loss.item()
             val_gender_loss+=gender_loss.item()
             val_emotion_loss+=emo_loss.item()
@@ -223,11 +220,11 @@ for epoch in range(num_epochs):
     val_loss=val_total_loss/len(val_emo_loader)
     val_gender_loss=val_gender_loss/len(val_emo_loader)
     val_emotion_loss=val_emotion_loss/len(val_emo_loader)
-    val_age_loss=val_age_loss/len(val_age_loader)
+    val_age_loss=val_age_loss/len(val_emo_loader)
     
     val_gender_accuracy=gender_corrects/len(val_emo_loader.dataset) * 100
     val_emotion_accuracy=emo_corrects/len(val_emo_loader.dataset) * 100
-    val_age_accuracy=age_corrects/len(val_age_loader.dataset) * 100
+    val_age_accuracy=age_corrects/len(val_emo_loader.dataset) * 100
     
     wandb.log({'train_total_loss':train_loss,
                'train_gender_loss':train_gender_loss,
@@ -271,6 +268,9 @@ wandb.log({'best validation gender acc':best_gender_acc,
 
 print('@@@@@@@@@@@@@@test start@@@@@@@@@@@@@')
 model.eval()
+gender_corrects=0
+emo_corrects=0
+age_corrects=0
 with torch.no_grad():
     test_emo_tq=tqdm(test_emo_loader,ncols=80, smoothing=0, bar_format='test: {desc}|{bar}{r_bar}')
     for i, (emo_data, gender_data,age_data) in enumerate(zip(test_emo_tq,test_gender_loader,test_age_loader)):
@@ -300,7 +300,7 @@ with torch.no_grad():
 
     test_gender_accuracy=gender_corrects/len(test_emo_loader.dataset) * 100
     test_emotion_accuracy=emo_corrects/len(test_emo_loader.dataset) * 100
-    test_age_accuracy=age_corrects/len(test_age_loader.dataset) * 100
+    test_age_accuracy=age_corrects/len(test_emo_loader.dataset) * 100
     
 wandb.log({'best test gender acc':test_gender_accuracy,
            'best test emotion acc':test_emotion_accuracy,

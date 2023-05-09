@@ -1,0 +1,344 @@
+2023-05-06 23:52:45,583 INFO    StreamThr :5015 [internal.py:wandb_internal():86] W&B internal server running at pid: 5015, started at: 2023-05-06 23:52:45.582536
+2023-05-06 23:52:45,585 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status
+2023-05-06 23:52:45,587 INFO    WriterThread:5015 [datastore.py:open_for_write():85] open: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/run-2fmrunis.wandb
+2023-05-06 23:52:45,588 DEBUG   SenderThread:5015 [sender.py:send():375] send: header
+2023-05-06 23:52:45,588 DEBUG   SenderThread:5015 [sender.py:send():375] send: run
+2023-05-06 23:52:46,124 INFO    SenderThread:5015 [dir_watcher.py:__init__():219] watching files in: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files
+2023-05-06 23:52:46,124 INFO    SenderThread:5015 [sender.py:_start_run_threads():1124] run started: 2fmrunis with start time 1683384764.638149
+2023-05-06 23:52:46,124 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: summary_record
+2023-05-06 23:52:46,125 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-06 23:52:46,132 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: check_version
+2023-05-06 23:52:46,132 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: check_version
+2023-05-06 23:52:46,182 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: run_start
+2023-05-06 23:52:46,183 DEBUG   HandlerThread:5015 [system_info.py:__init__():31] System info init
+2023-05-06 23:52:46,183 DEBUG   HandlerThread:5015 [system_info.py:__init__():46] System info init done
+2023-05-06 23:52:46,183 INFO    HandlerThread:5015 [system_monitor.py:start():181] Starting system monitor
+2023-05-06 23:52:46,183 INFO    SystemMonitor:5015 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-06 23:52:46,183 INFO    HandlerThread:5015 [system_monitor.py:probe():201] Collecting system info
+2023-05-06 23:52:46,184 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started cpu monitoring
+2023-05-06 23:52:46,185 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started disk monitoring
+2023-05-06 23:52:46,185 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started gpu monitoring
+2023-05-06 23:52:46,186 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started memory monitoring
+2023-05-06 23:52:46,186 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started network monitoring
+2023-05-06 23:52:46,219 DEBUG   HandlerThread:5015 [system_info.py:probe():195] Probing system
+2023-05-06 23:52:46,220 DEBUG   HandlerThread:5015 [system_info.py:_probe_git():180] Probing git
+2023-05-06 23:52:46,251 DEBUG   HandlerThread:5015 [system_info.py:_probe_git():188] Probing git done
+2023-05-06 23:52:46,251 DEBUG   HandlerThread:5015 [system_info.py:probe():240] Probing system done
+2023-05-06 23:52:46,251 DEBUG   HandlerThread:5015 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-137-generic-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2023-05-06T14:52:46.219283', 'startedAt': '2023-05-06T14:52:40.717107', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/JuWanMaeng/crowd_status_analyzer.git', 'commit': '277ccc89292470e18093753d28f257f6a862de31'}, 'email': 'aodwndhks@gmail.com', 'root': '/home/joowan/Desktop/face_pr', 'host': 'user1', 'username': 'joowan', 'executable': '/home/joowan/anaconda3/envs/face/bin/python', 'cpu_count': 18, 'cpu_count_logical': 36, 'cpu_freq': {'current': 3.0684166666666677, 'min': 1200.0, 'max': 4633.333333333333}, 'cpu_freq_per_core': [{'current': 3.687, 'min': 1200.0, 'max': 4600.0}, {'current': 1.489, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.671, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.687, 'min': 1200.0, 'max': 4600.0}, {'current': 3.684, 'min': 1200.0, 'max': 4600.0}, {'current': 3.801, 'min': 1200.0, 'max': 4800.0}, {'current': 3.812, 'min': 1200.0, 'max': 4700.0}, {'current': 3.568, 'min': 1200.0, 'max': 4800.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.603, 'min': 1200.0, 'max': 4600.0}, {'current': 3.667, 'min': 1200.0, 'max': 4600.0}, {'current': 3.656, 'min': 1200.0, 'max': 4600.0}, {'current': 2.813, 'min': 1200.0, 'max': 4600.0}, {'current': 3.865, 'min': 1200.0, 'max': 4600.0}, {'current': 3.684, 'min': 1200.0, 'max': 4600.0}, {'current': 3.11, 'min': 1200.0, 'max': 4700.0}, {'current': 3.758, 'min': 1200.0, 'max': 4600.0}, {'current': 1.563, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.793, 'min': 1200.0, 'max': 4600.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.802, 'min': 1200.0, 'max': 4600.0}, {'current': 3.897, 'min': 1200.0, 'max': 4600.0}, {'current': 3.659, 'min': 1200.0, 'max': 4800.0}, {'current': 3.8, 'min': 1200.0, 'max': 4700.0}, {'current': 3.311, 'min': 1200.0, 'max': 4800.0}, {'current': 1.2, 'min': 1200.0, 'max': 4600.0}, {'current': 3.694, 'min': 1200.0, 'max': 4600.0}, {'current': 3.575, 'min': 1200.0, 'max': 4600.0}, {'current': 3.486, 'min': 1200.0, 'max': 4600.0}, {'current': 2.969, 'min': 1200.0, 'max': 4600.0}, {'current': 3.837, 'min': 1200.0, 'max': 4600.0}, {'current': 3.598, 'min': 1200.0, 'max': 4600.0}, {'current': 2.724, 'min': 1200.0, 'max': 4700.0}], 'disk': {'total': 915.3232879638672, 'used': 503.1597595214844}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 62.49541091918945}}
+2023-05-06 23:52:46,251 INFO    HandlerThread:5015 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-06 23:52:46,251 INFO    HandlerThread:5015 [system_monitor.py:probe():214] Publishing system info
+2023-05-06 23:52:46,251 DEBUG   HandlerThread:5015 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-06 23:52:46,252 DEBUG   HandlerThread:5015 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-06 23:52:46,252 DEBUG   HandlerThread:5015 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-06 23:52:47,127 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/conda-environment.yaml
+2023-05-06 23:52:47,128 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-summary.json
+2023-05-06 23:52:47,128 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/requirements.txt
+2023-05-06 23:52:48,042 DEBUG   HandlerThread:5015 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-06 23:52:48,044 INFO    HandlerThread:5015 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-06 23:52:48,045 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,046 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-06 23:52:48,067 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-06 23:52:48,068 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: stop_status
+2023-05-06 23:52:48,127 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/conda-environment.yaml
+2023-05-06 23:52:48,127 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-metadata.json
+2023-05-06 23:52:48,320 DEBUG   SenderThread:5015 [sender.py:send():375] send: telemetry
+2023-05-06 23:52:48,321 DEBUG   SenderThread:5015 [sender.py:send():375] send: telemetry
+2023-05-06 23:52:48,321 DEBUG   SenderThread:5015 [sender.py:send():375] send: run
+2023-05-06 23:52:48,548 INFO    SenderThread:5015 [sender.py:send_run():1002] updated run: 2fmrunis
+2023-05-06 23:52:48,548 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,548 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_cae79e778b2f8be6298e.png with policy now
+2023-05-06 23:52:48,549 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,549 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_998eb9e4de7856797342.png with policy now
+2023-05-06 23:52:48,549 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,549 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_2778b20ff8bba539a7dc.png with policy now
+2023-05-06 23:52:48,549 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,549 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_1e8d5c634bf2529695c4.png with policy now
+2023-05-06 23:52:48,550 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,550 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_6f58a49504e56ee57747.png with policy now
+2023-05-06 23:52:48,550 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,550 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_cb0ad769902a38ff0a0a.png with policy now
+2023-05-06 23:52:48,550 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,550 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_f0a271c6ad71f49c684d.png with policy now
+2023-05-06 23:52:48,551 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,551 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_33e8bd689d4f304d6657.png with policy now
+2023-05-06 23:52:48,554 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,555 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_a2d4ec4ffb5a3f6795fe.png with policy now
+2023-05-06 23:52:48,556 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,556 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_680996bed70b0aebaf58.png with policy now
+2023-05-06 23:52:48,556 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,556 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_905e613c045b0322495b.png with policy now
+2023-05-06 23:52:48,561 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,562 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_73dc201670da7744a7e1.png with policy now
+2023-05-06 23:52:48,563 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,563 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_0a5023139e6525a79e22.png with policy now
+2023-05-06 23:52:48,568 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,568 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_9b74d42109d0473c6582.png with policy now
+2023-05-06 23:52:48,569 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,569 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_665d6d429b610e927062.png with policy now
+2023-05-06 23:52:48,569 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,569 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_e686b1549cde5480516b.png with policy now
+2023-05-06 23:52:48,574 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,574 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_6b47320f9ab642e1f07c.png with policy now
+2023-05-06 23:52:48,575 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,575 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_9821377852cd63f6de18.png with policy now
+2023-05-06 23:52:48,580 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,580 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_0ece81c1f673f3a640ef.png with policy now
+2023-05-06 23:52:48,581 DEBUG   SenderThread:5015 [sender.py:send():375] send: files
+2023-05-06 23:52:48,581 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file media/images/Image_0_80731daba0fa0a1a7084.png with policy now
+2023-05-06 23:52:48,597 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-06 23:52:48,598 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: pause
+2023-05-06 23:52:48,598 INFO    HandlerThread:5015 [handler.py:handle_request_pause():719] stopping system metrics thread or process
+2023-05-06 23:52:48,598 INFO    HandlerThread:5015 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-06 23:52:48,599 DEBUG   SenderThread:5015 [sender.py:send():375] send: history
+2023-05-06 23:52:48,599 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-06 23:52:48,599 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-06 23:52:48,600 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: summary_record
+2023-05-06 23:52:48,600 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-06 23:52:48,600 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined disk monitor
+2023-05-06 23:52:48,601 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-06 23:52:48,601 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-06 23:52:48,812 INFO    wandb-upload_0:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/vvzpt32p-wandb-metadata.json
+2023-05-06 23:52:49,128 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-summary.json
+2023-05-06 23:52:49,128 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/config.yaml
+2023-05-06 23:52:49,129 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_680996bed70b0aebaf58.png
+2023-05-06 23:52:49,129 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_2778b20ff8bba539a7dc.png
+2023-05-06 23:52:49,129 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_6b47320f9ab642e1f07c.png
+2023-05-06 23:52:49,130 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_665d6d429b610e927062.png
+2023-05-06 23:52:49,130 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_1e8d5c634bf2529695c4.png
+2023-05-06 23:52:49,131 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_905e613c045b0322495b.png
+2023-05-06 23:52:49,131 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_0ece81c1f673f3a640ef.png
+2023-05-06 23:52:49,132 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_0a5023139e6525a79e22.png
+2023-05-06 23:52:49,132 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_6f58a49504e56ee57747.png
+2023-05-06 23:52:49,133 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_f0a271c6ad71f49c684d.png
+2023-05-06 23:52:49,134 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_cae79e778b2f8be6298e.png
+2023-05-06 23:52:49,134 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_a2d4ec4ffb5a3f6795fe.png
+2023-05-06 23:52:49,135 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_cb0ad769902a38ff0a0a.png
+2023-05-06 23:52:49,135 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_9b74d42109d0473c6582.png
+2023-05-06 23:52:49,136 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_80731daba0fa0a1a7084.png
+2023-05-06 23:52:49,136 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_73dc201670da7744a7e1.png
+2023-05-06 23:52:49,137 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_e686b1549cde5480516b.png
+2023-05-06 23:52:49,137 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_998eb9e4de7856797342.png
+2023-05-06 23:52:49,138 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_9821377852cd63f6de18.png
+2023-05-06 23:52:49,139 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_33e8bd689d4f304d6657.png
+2023-05-06 23:52:49,139 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media
+2023-05-06 23:52:49,139 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_created():278] file/dir created: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images
+2023-05-06 23:52:49,181 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-06 23:52:49,181 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined memory monitor
+2023-05-06 23:52:49,182 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined network monitor
+2023-05-06 23:52:49,182 DEBUG   SenderThread:5015 [sender.py:send():375] send: stats
+2023-05-06 23:52:49,336 INFO    wandb-upload_9:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/c4yqv9bg-media/images/Image_0_a2d4ec4ffb5a3f6795fe.png
+2023-05-06 23:52:49,368 INFO    wandb-upload_1:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/tog3jcpi-media/images/Image_0_cae79e778b2f8be6298e.png
+2023-05-06 23:52:49,415 INFO    wandb-upload_2:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/06dmjhzg-media/images/Image_0_998eb9e4de7856797342.png
+2023-05-06 23:52:49,472 INFO    wandb-upload_11:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/nagzer6i-media/images/Image_0_905e613c045b0322495b.png
+2023-05-06 23:52:49,475 INFO    wandb-upload_6:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/1wv6vg5z-media/images/Image_0_cb0ad769902a38ff0a0a.png
+2023-05-06 23:52:49,476 INFO    wandb-upload_13:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/gemevfby-media/images/Image_0_0a5023139e6525a79e22.png
+2023-05-06 23:52:49,502 INFO    wandb-upload_5:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/iexlqs2m-media/images/Image_0_6f58a49504e56ee57747.png
+2023-05-06 23:52:49,503 INFO    wandb-upload_12:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/t28m4j4w-media/images/Image_0_73dc201670da7744a7e1.png
+2023-05-06 23:52:49,512 INFO    wandb-upload_3:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/els9gtvd-media/images/Image_0_2778b20ff8bba539a7dc.png
+2023-05-06 23:52:49,512 INFO    wandb-upload_4:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/qozogv03-media/images/Image_0_1e8d5c634bf2529695c4.png
+2023-05-06 23:52:49,547 INFO    wandb-upload_19:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/q5aen8ur-media/images/Image_0_0ece81c1f673f3a640ef.png
+2023-05-06 23:52:49,552 INFO    wandb-upload_7:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/yi11jbf9-media/images/Image_0_f0a271c6ad71f49c684d.png
+2023-05-06 23:52:49,563 INFO    wandb-upload_8:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/3avjizqt-media/images/Image_0_33e8bd689d4f304d6657.png
+2023-05-06 23:52:49,568 INFO    wandb-upload_16:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/z7t1elsb-media/images/Image_0_e686b1549cde5480516b.png
+2023-05-06 23:52:49,570 INFO    wandb-upload_14:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/osus6zaj-media/images/Image_0_9b74d42109d0473c6582.png
+2023-05-06 23:52:49,578 INFO    wandb-upload_18:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/uklk4726-media/images/Image_0_9821377852cd63f6de18.png
+2023-05-06 23:52:49,610 INFO    wandb-upload_10:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/m0t8s85p-media/images/Image_0_680996bed70b0aebaf58.png
+2023-05-06 23:52:49,611 INFO    wandb-upload_15:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/vyykx8go-media/images/Image_0_665d6d429b610e927062.png
+2023-05-06 23:52:49,668 INFO    wandb-upload_20:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/t1c7fr68-media/images/Image_0_80731daba0fa0a1a7084.png
+2023-05-06 23:52:49,744 INFO    wandb-upload_17:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/aff0wygx-media/images/Image_0_6b47320f9ab642e1f07c.png
+2023-05-06 23:52:50,245 INFO    wandb-upload_0:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/whst443j-media/images/Image_0_905e613c045b0322495b.png
+2023-05-06 23:52:50,333 INFO    wandb-upload_4:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/h50g8y16-media/images/Image_0_73dc201670da7744a7e1.png
+2023-05-06 23:52:50,342 INFO    wandb-upload_13:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/rclpv3kn-media/images/Image_0_cae79e778b2f8be6298e.png
+2023-05-06 23:52:50,350 INFO    wandb-upload_9:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/1h4je33w-media/images/Image_0_998eb9e4de7856797342.png
+2023-05-06 23:52:50,593 INFO    wandb-upload_11:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/evqbeds4-media/images/Image_0_6f58a49504e56ee57747.png
+2023-05-06 23:52:50,599 INFO    wandb-upload_1:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/x2vje7xx-media/images/Image_0_0a5023139e6525a79e22.png
+2023-05-06 23:52:50,600 INFO    wandb-upload_5:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/3xtqh8jm-media/images/Image_0_a2d4ec4ffb5a3f6795fe.png
+2023-05-06 23:52:50,621 INFO    wandb-upload_2:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/0n7shx5j-media/images/Image_0_cb0ad769902a38ff0a0a.png
+2023-05-06 23:52:50,674 INFO    wandb-upload_12:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/9kj53o0g-media/images/Image_0_9821377852cd63f6de18.png
+2023-05-06 23:52:50,742 INFO    wandb-upload_19:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/vnwy1odn-media/images/Image_0_e686b1549cde5480516b.png
+2023-05-06 23:52:50,746 INFO    wandb-upload_3:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/ehqesyix-media/images/Image_0_33e8bd689d4f304d6657.png
+2023-05-06 23:52:51,041 INFO    wandb-upload_15:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/kepirv1b-media/images/Image_0_6b47320f9ab642e1f07c.png
+2023-05-06 23:52:51,183 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:52:51,300 INFO    wandb-upload_17:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/h3ey9umy-media/images/Image_0_1e8d5c634bf2529695c4.png
+2023-05-06 23:52:51,308 INFO    wandb-upload_4:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/3kd4x90r-media/images/Image_0_9b74d42109d0473c6582.png
+2023-05-06 23:52:51,343 INFO    wandb-upload_20:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/geo6qya1-media/images/Image_0_665d6d429b610e927062.png
+2023-05-06 23:52:51,396 INFO    wandb-upload_13:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/txkjom57-media/images/Image_0_80731daba0fa0a1a7084.png
+2023-05-06 23:52:51,411 INFO    wandb-upload_6:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/bmhal0ea-media/images/Image_0_2778b20ff8bba539a7dc.png
+2023-05-06 23:52:51,426 INFO    wandb-upload_14:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/5xcho7pn-media/images/Image_0_680996bed70b0aebaf58.png
+2023-05-06 23:52:51,723 INFO    wandb-upload_5:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/zfw1qx9a-media/images/Image_0_0ece81c1f673f3a640ef.png
+2023-05-06 23:52:51,737 INFO    wandb-upload_0:5015 [upload_job.py:push():137] Uploaded file /tmp/tmprnuskq1xwandb/jlqx41dl-media/images/Image_0_f0a271c6ad71f49c684d.png
+2023-05-06 23:52:56,184 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:01,185 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:03,066 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-06 23:53:03,067 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: stop_status
+2023-05-06 23:53:06,289 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:11,290 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:16,299 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:17,153 INFO    Thread-61 :5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/config.yaml
+2023-05-06 23:53:18,065 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-06 23:53:18,066 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: stop_status
+2023-05-06 23:53:22,268 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:27,269 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:32,270 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:33,065 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-06 23:53:33,066 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: stop_status
+2023-05-06 23:53:37,276 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:42,277 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:47,277 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:48,066 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-06 23:53:48,067 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: stop_status
+2023-05-06 23:53:49,534 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: resume
+2023-05-06 23:53:49,534 INFO    HandlerThread:5015 [handler.py:handle_request_resume():710] starting system metrics thread or process
+2023-05-06 23:53:49,534 INFO    HandlerThread:5015 [system_monitor.py:start():181] Starting system monitor
+2023-05-06 23:53:49,534 INFO    SystemMonitor:5015 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-06 23:53:49,535 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started cpu monitoring
+2023-05-06 23:53:49,536 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started disk monitoring
+2023-05-06 23:53:49,537 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started gpu monitoring
+2023-05-06 23:53:49,538 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started memory monitoring
+2023-05-06 23:53:49,540 INFO    SystemMonitor:5015 [interfaces.py:start():190] Started network monitoring
+2023-05-06 23:53:50,242 DEBUG   SenderThread:5015 [sender.py:send():375] send: telemetry
+2023-05-06 23:53:50,243 DEBUG   SenderThread:5015 [sender.py:send():375] send: exit
+2023-05-06 23:53:50,243 INFO    SenderThread:5015 [sender.py:send_exit():598] handling exit code: 0
+2023-05-06 23:53:50,243 INFO    SenderThread:5015 [sender.py:send_exit():600] handling runtime: 3
+2023-05-06 23:53:50,245 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-06 23:53:50,245 INFO    SenderThread:5015 [sender.py:send_exit():606] send defer
+2023-05-06 23:53:50,245 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,245 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-06 23:53:50,246 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,246 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-06 23:53:50,246 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 1
+2023-05-06 23:53:50,246 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,246 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-06 23:53:50,246 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,246 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-06 23:53:50,246 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 2
+2023-05-06 23:53:50,246 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,246 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-06 23:53:50,246 INFO    HandlerThread:5015 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-06 23:53:50,247 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-06 23:53:50,247 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-06 23:53:50,247 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-06 23:53:50,247 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined disk monitor
+2023-05-06 23:53:50,247 DEBUG   SystemMonitor:5015 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-06 23:53:50,603 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-06 23:53:50,603 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined memory monitor
+2023-05-06 23:53:50,603 INFO    HandlerThread:5015 [interfaces.py:finish():202] Joined network monitor
+2023-05-06 23:53:50,604 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,604 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-06 23:53:50,605 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 3
+2023-05-06 23:53:50,605 DEBUG   SenderThread:5015 [sender.py:send():375] send: stats
+2023-05-06 23:53:50,605 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,605 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-06 23:53:50,606 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,606 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-06 23:53:50,606 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 4
+2023-05-06 23:53:50,606 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,606 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-06 23:53:50,606 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,606 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-06 23:53:50,606 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 5
+2023-05-06 23:53:50,606 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,606 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-06 23:53:50,607 DEBUG   SenderThread:5015 [sender.py:send():375] send: summary
+2023-05-06 23:53:50,607 INFO    SenderThread:5015 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-06 23:53:50,608 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,608 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-06 23:53:50,608 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 6
+2023-05-06 23:53:50,608 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,608 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-06 23:53:50,608 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,608 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-06 23:53:50,613 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: status_report
+2023-05-06 23:53:50,937 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 7
+2023-05-06 23:53:50,938 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,938 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-06 23:53:50,938 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,939 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-06 23:53:50,939 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 8
+2023-05-06 23:53:50,939 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,939 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-06 23:53:50,939 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,939 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-06 23:53:50,940 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 9
+2023-05-06 23:53:50,940 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:50,940 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-06 23:53:50,940 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:50,940 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-06 23:53:50,941 INFO    SenderThread:5015 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-06 23:53:51,159 INFO    SenderThread:5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-summary.json
+2023-05-06 23:53:51,159 INFO    SenderThread:5015 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/config.yaml
+2023-05-06 23:53:51,159 INFO    SenderThread:5015 [dir_watcher.py:finish():395] scan: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files
+2023-05-06 23:53:51,160 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/config.yaml config.yaml
+2023-05-06 23:53:51,160 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-metadata.json wandb-metadata.json
+2023-05-06 23:53:51,160 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-summary.json wandb-summary.json
+2023-05-06 23:53:51,160 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/requirements.txt requirements.txt
+2023-05-06 23:53:51,160 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/conda-environment.yaml conda-environment.yaml
+2023-05-06 23:53:51,182 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_cae79e778b2f8be6298e.png media/images/Image_0_cae79e778b2f8be6298e.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_9821377852cd63f6de18.png media/images/Image_0_9821377852cd63f6de18.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_680996bed70b0aebaf58.png media/images/Image_0_680996bed70b0aebaf58.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_0ece81c1f673f3a640ef.png media/images/Image_0_0ece81c1f673f3a640ef.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_80731daba0fa0a1a7084.png media/images/Image_0_80731daba0fa0a1a7084.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_f0a271c6ad71f49c684d.png media/images/Image_0_f0a271c6ad71f49c684d.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_cb0ad769902a38ff0a0a.png media/images/Image_0_cb0ad769902a38ff0a0a.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_a2d4ec4ffb5a3f6795fe.png media/images/Image_0_a2d4ec4ffb5a3f6795fe.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_e686b1549cde5480516b.png media/images/Image_0_e686b1549cde5480516b.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_1e8d5c634bf2529695c4.png media/images/Image_0_1e8d5c634bf2529695c4.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_33e8bd689d4f304d6657.png media/images/Image_0_33e8bd689d4f304d6657.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_2778b20ff8bba539a7dc.png media/images/Image_0_2778b20ff8bba539a7dc.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_6f58a49504e56ee57747.png media/images/Image_0_6f58a49504e56ee57747.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_6b47320f9ab642e1f07c.png media/images/Image_0_6b47320f9ab642e1f07c.png
+2023-05-06 23:53:51,183 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_0a5023139e6525a79e22.png media/images/Image_0_0a5023139e6525a79e22.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_998eb9e4de7856797342.png media/images/Image_0_998eb9e4de7856797342.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_665d6d429b610e927062.png media/images/Image_0_665d6d429b610e927062.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_73dc201670da7744a7e1.png media/images/Image_0_73dc201670da7744a7e1.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_905e613c045b0322495b.png media/images/Image_0_905e613c045b0322495b.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [dir_watcher.py:finish():409] scan save: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/media/images/Image_0_9b74d42109d0473c6582.png media/images/Image_0_9b74d42109d0473c6582.png
+2023-05-06 23:53:51,184 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 10
+2023-05-06 23:53:51,184 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:51,184 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-06 23:53:51,185 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:51,185 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-06 23:53:51,185 INFO    SenderThread:5015 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-06 23:53:51,244 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-06 23:53:51,244 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: poll_exit
+2023-05-06 23:53:51,781 INFO    wandb-upload_8:5015 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/wandb-summary.json
+2023-05-06 23:53:51,793 INFO    wandb-upload_18:5015 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/conda-environment.yaml
+2023-05-06 23:53:51,795 INFO    wandb-upload_9:5015 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/config.yaml
+2023-05-06 23:53:51,820 INFO    wandb-upload_16:5015 [upload_job.py:push():137] Uploaded file /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/files/requirements.txt
+2023-05-06 23:53:52,021 INFO    Thread-60 :5015 [sender.py:transition_state():626] send defer: 11
+2023-05-06 23:53:52,022 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:52,022 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-06 23:53:52,023 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:52,023 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-06 23:53:52,023 INFO    SenderThread:5015 [file_pusher.py:join():173] waiting for file pusher
+2023-05-06 23:53:52,023 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 12
+2023-05-06 23:53:52,023 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:52,023 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-06 23:53:52,024 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:52,024 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-06 23:53:52,245 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-06 23:53:52,846 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 13
+2023-05-06 23:53:52,846 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: poll_exit
+2023-05-06 23:53:52,846 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:52,847 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-06 23:53:52,847 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:52,847 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-06 23:53:52,847 INFO    SenderThread:5015 [sender.py:transition_state():626] send defer: 14
+2023-05-06 23:53:52,848 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: defer
+2023-05-06 23:53:52,848 DEBUG   SenderThread:5015 [sender.py:send():375] send: final
+2023-05-06 23:53:52,848 INFO    HandlerThread:5015 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-06 23:53:52,848 DEBUG   SenderThread:5015 [sender.py:send():375] send: footer
+2023-05-06 23:53:52,848 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: defer
+2023-05-06 23:53:52,848 INFO    SenderThread:5015 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-06 23:53:52,849 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-06 23:53:52,850 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: server_info
+2023-05-06 23:53:52,850 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-06 23:53:52,850 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: poll_exit
+2023-05-06 23:53:52,850 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-06 23:53:52,851 DEBUG   SenderThread:5015 [sender.py:send_request():402] send_request: server_info
+2023-05-06 23:53:53,246 DEBUG   HandlerThread:5015 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-06 23:53:53,247 INFO    HandlerThread:5015 [handler.py:finish():845] shutting down handler
+2023-05-06 23:53:53,850 INFO    WriterThread:5015 [datastore.py:close():298] close: /home/joowan/Desktop/face_pr/wandb/run-20230506_235240-2fmrunis/run-2fmrunis.wandb
+2023-05-06 23:53:54,246 INFO    SenderThread:5015 [sender.py:finish():1550] shutting down sender
+2023-05-06 23:53:54,246 INFO    SenderThread:5015 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-06 23:53:54,246 INFO    SenderThread:5015 [file_pusher.py:join():173] waiting for file pusher
