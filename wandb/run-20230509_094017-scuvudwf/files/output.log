@@ -1,8 +1,0 @@
-
-device:cuda:1,backbone:resnet18_5step_SGD
-Traceback (most recent call last):
-  File "train_MTL.py", line 40, in <module>
-    optimizer = optim.SGD(model.parameters(),momentum=[0.9,0.99],lr=0.001)
-  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/optim/sgd.py", line 16, in __init__
-    if momentum < 0.0:
-TypeError: '<' not supported between instances of 'list' and 'float'
