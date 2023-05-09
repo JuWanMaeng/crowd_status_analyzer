@@ -17,12 +17,12 @@ from torchsummary import summary
 
 ###################################################################
 wandb.init(project='MultiTask',entity='kookmin_ai')
-device='cuda:1' if torch.cuda.is_available() else 'cpu'
-backbone='effb1'
-model=MultiTaskModel_eff1(phase='train')
-emo_weight=2
-gender_weight=1
-age_weight=2
+device='cuda:0' if torch.cuda.is_available() else 'cpu'
+backbone='resnet18'
+model=MultiTaskModel(phase='train')
+emo_weight=10
+gender_weight=0.5
+age_weight=5
 num_epochs=100
 ##################################################################
 model_name=f'weight/MTL/{backbone}_MTL_{emo_weight}{gender_weight}{age_weight}.pt'
@@ -37,8 +37,9 @@ emotion_criterion = nn.CrossEntropyLoss()
 age_criterion=nn.CrossEntropyLoss()
 
 optimizer = optim.Adam(model.parameters(), lr=0.001)
+
 #scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=10)
-scheduler = lr_scheduler.StepLR(optimizer, step_size=15, gamma=0.5)
+scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
 
 # Define dataloader
 train_gender_dataset=GenderDataset(phase='train')
@@ -151,18 +152,19 @@ for epoch in range(num_epochs):
         common_loss.backward()
         optimizer.step()
         
-        # 각각의 total loss 저장
+        # Compute each losses
         train_total_loss+=common_loss_value
         train_gender_loss+=gender_loss.item()
         train_emotion_loss +=emo_loss.item()
         train_age_loss+=age_loss.item()
     
-    # epoch 당 각각의 loss
+    # epoch loss
     train_loss = train_total_loss/len(train_gender_loader)
     train_gender_loss = train_gender_loss/len(train_gender_loader)
     train_emotoin_loss = train_emotion_loss/len(train_gender_loader)
     train_age_loss=train_age_loss/len(train_gender_loader)   
-    # epoch 당 각각의 accuracy
+    
+    # epoch accuracy
     train_gender_accuracy=gender_corrects/len(train_gender_loader.dataset) * 100
     train_emotion_accuracy=emo_corrects/len(train_gender_loader.dataset) * 100
     train_age_accuracy=age_corrects/len(train_gender_loader.dataset) * 100

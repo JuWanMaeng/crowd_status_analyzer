@@ -1,7 +1,9 @@
-import cv2
-import wandb
-import numpy as np
-import time
-import torch
-from MTL.model import resnet
-import glob
+import sys
+from PyQt5.QtWidgets import *
+
+app=QApplication(sys.argv)
+
+win=QWidget()
+win.show()
+
+app.exec_()
