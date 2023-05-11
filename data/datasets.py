@@ -35,7 +35,7 @@ class EmotionDataset(data.Dataset): # 칼라 이미지 감정 dataset (100,100)
             transforms.RandomHorizontalFlip(),
             transforms.RandomRotation(degrees=45),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
         ])
         self.transform=transforms.Compose([
             transforms.Resize((128,128)),
@@ -52,6 +52,7 @@ class EmotionDataset(data.Dataset): # 칼라 이미지 감정 dataset (100,100)
         img=cv2.imread(img_path)
         img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         img=im.fromarray(img)
+
         
         label=self.label[label]
         
@@ -91,12 +92,12 @@ class GenderDataset(data.Dataset):  # UTKFace 에서 성별만 따로 뽑음
             transforms.RandomHorizontalFlip(),
             transforms.RandomRotation(degrees=45),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
         ])
         self.transform=transforms.Compose([
             transforms.Resize((128,128)),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
             ])
         
         
@@ -145,12 +146,12 @@ class AgeDataset(data.Dataset):  # UTKFace 에서 성별만 따로 뽑음
             transforms.RandomHorizontalFlip(),
             transforms.RandomRotation(degrees=45),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
         ])
         self.transform=transforms.Compose([
             transforms.Resize((128,128)),
             transforms.ToTensor(),
-            transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+            #transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
             ])
         self.label={'youth':0, 'student':1,'adult':2, 'elder':3}
         
@@ -181,5 +182,8 @@ if __name__ == '__main__':
     tt=EmotionDataset(phase='val')
     train_dataloader=DataLoader(tt,batch_size=32,num_workers=8,shuffle=True)
     for i in range(len(train_dataloader.dataset)):
-        print(tt[i][0].shape)
+        print(tt[i][0])
         break
+    
+    image=cv2.imread('data/Expw-F/angry/1angry_actor_104.jpg')
+    print(image)

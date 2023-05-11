@@ -3,7 +3,6 @@ import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchsummary import summary
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from data.datasets import FERDataset,GenderDataset,ExpDataset
 import torch.optim.lr_scheduler as lr_scheduler
 from PIL import Image as Im
 import cv2
@@ -21,16 +20,16 @@ from utils.visuallize import vis
 import wandb
 
 #################################################################
-wandb.init(project='age',entity='kookmin_ai')
-device='cuda:0' if torch.cuda.is_available() else 'cpu'
-mode='age'
-backbone='resnet18'
+wandb.init(project='emotion',entity='kookmin_ai')
+device='cuda:3' if torch.cuda.is_available() else 'cpu'
+mode='emotion'
+backbone='resnet152'
 model=resnet.EmotionModel()
 max_epoch=100
 wandb.run.name=f'{backbone}'
 #wandb.run.save()
 ################################################################
-model_name=f'weight/tmp/{mode}128_{backbone}.pt'
+model_name=f'weight/tmp/{mode}128_{backbone}_xnor.pt'
 print(f'device:{device}, mode:{mode}, backbone:{backbone}')
 train_dl,val_dl,test_dl,criterion,optimizer,scheduler=check(mode,model)
 

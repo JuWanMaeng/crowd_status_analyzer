@@ -1,13 +1,12 @@
 import torch
 import torch.nn as nn
-from MTL.model.MTL_model import MultiTaskModel,MultiTaskModel_eff1
+from MTL.model.MTL_model import MultiTaskModel,SwinMTL
 from data.datasets import EmotionDataset,GenderDataset,AgeDataset
 from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch.optim as optim
 from tqdm import tqdm
 from utils.train_utils import get_lr
-from utils.loss import FocalLoss
 import copy
 import wandb,cv2,time
 import numpy as np
@@ -18,11 +17,12 @@ from torchsummary import summary
 ###################################################################
 wandb.init(project='MultiTask',entity='kookmin_ai')
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
-backbone='resnet18'
+backbone='SwinT'
 model=MultiTaskModel(phase='train')
-emo_weight=10
-gender_weight=0.5
-age_weight=5
+model=SwinMTL(phase='train')
+emo_weight=1
+gender_weight=1
+age_weight=1
 num_epochs=100
 ##################################################################
 model_name=f'weight/MTL/{backbone}_MTL_{emo_weight}{gender_weight}{age_weight}.pt'
@@ -39,7 +39,7 @@ age_criterion=nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 #scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=10)
-scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
+scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
 
 # Define dataloader
 train_gender_dataset=GenderDataset(phase='train')

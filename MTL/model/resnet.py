@@ -1,7 +1,7 @@
 import torch
 import torchvision.models as models
 import torch.nn as nn
-from torchvision.models import resnet50,resnet18,efficientnet_b0,efficientnet_b1
+from torchvision.models import resnet50,resnet18,efficientnet_b0,efficientnet_b1,resnet152
 from torchsummary import summary
 
 
@@ -10,9 +10,9 @@ class EmotionModel(nn.Module):
     def __init__(self,phase='train',num_emotions=7):
         super(EmotionModel, self).__init__()
         if phase=='train':
-            resnet = resnet18(weights='ResNet18_Weights.IMAGENET1K_V1')
+            resnet = resnet152(weights='ResNet152_Weights.IMAGENET1K_V1')
         else:
-            resnet=resnet18()
+            resnet=resnet152()
         
         self.feature_extractor = resnet
         

@@ -1,0 +1,91 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.16
+    cli_version: 0.15.0
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1683700139.353891
+    t:
+      1:
+      - 1
+      - 41
+      - 55
+      2:
+      - 1
+      - 41
+      - 55
+      3:
+      - 17
+      - 23
+      - 37
+      4: 3.8.16
+      5: 0.15.0
+      8:
+      - 5
+    visualize:
+      train_val_loss:
+        panel_type: Vega2
+        panel_config:
+          panelDefId: wandb/lineseries/v0
+          fieldSettings:
+            step: step
+            lineKey: lineKey
+            lineVal: lineVal
+          stringSettings:
+            title: Train vs. Validation Loss
+            xname: Epoch
+          transform:
+            name: tableWithLeafColNames
+          userQuery:
+            queryFields:
+            - name: runSets
+              args:
+              - name: runSets
+                value: ${runSets}
+              fields:
+              - name: id
+                fields: []
+              - name: name
+                fields: []
+              - name: _defaultColorIndex
+                fields: []
+              - name: summaryTable
+                args:
+                - name: tableKey
+                  value: train_val_loss_table
+                fields: []
+      train_val_acc:
+        panel_type: Vega2
+        panel_config:
+          panelDefId: wandb/lineseries/v0
+          fieldSettings:
+            step: step
+            lineKey: lineKey
+            lineVal: lineVal
+          stringSettings:
+            title: Train vs. Validation accuracy
+            xname: Epoch
+          transform:
+            name: tableWithLeafColNames
+          userQuery:
+            queryFields:
+            - name: runSets
+              args:
+              - name: runSets
+                value: ${runSets}
+              fields:
+              - name: id
+                fields: []
+              - name: name
+                fields: []
+              - name: _defaultColorIndex
+                fields: []
+              - name: summaryTable
+                args:
+                - name: tableKey
+                  value: train_val_acc_table
+                fields: []

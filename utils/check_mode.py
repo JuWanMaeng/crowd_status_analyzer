@@ -3,7 +3,7 @@ import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchsummary import summary
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from data.datasets import FERDataset,GenderDataset,ExpDataset,AgeDataset
+from data.datasets import GenderDataset,EmotionDataset,AgeDataset
 import torch.optim.lr_scheduler as lr_scheduler
 
 import os
@@ -21,9 +21,9 @@ def check(mode,model):
     else:  
         if mode=='emotion':
             # load dataset
-            train_ds=ExpDataset(phase='train')
-            val_ds=ExpDataset(phase='val')
-            test_ds=ExpDataset(phase='test')
+            train_ds=EmotionDataset(phase='train')
+            val_ds=EmotionDataset(phase='val')
+            test_ds=EmotionDataset(phase='test')
             # make dataloade
             train_dl = DataLoader(train_ds, batch_size=256, shuffle=True,num_workers=8)
             val_dl = DataLoader(val_ds, batch_size=32, shuffle=True,num_workers=4)
@@ -36,7 +36,7 @@ def check(mode,model):
             
             criterion = nn.CrossEntropyLoss()
             optimizer = optim.Adam(model.parameters(), lr=0.001)
-            scheduler = lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.5)
+            scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
     
             
         elif mode=='gender':

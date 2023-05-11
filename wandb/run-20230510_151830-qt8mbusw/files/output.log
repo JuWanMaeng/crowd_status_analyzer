@@ -1,0 +1,333 @@
+device:cuda:3, mode:emotion, backbone:resnet152
+emotion
+total train data:73437
+total val data:9180
+total test data:9176
+************************************************************
+1/100 current_lr:0.001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 287/287 [02:11<00:00,  2.18it/s]
+
+
+
+val: |████████████████████████████████████████| 287/287 [00:06<00:00, 41.59it/s]
+train: |                                                | 0/287 [00:00<?, ?it/s]
+Copied best model weights!
+train loss: 1.513630, val loss: 1.495763, val_accuracy: 38.01
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 287/287 [02:11<00:00,  2.19it/s]
+
+
+
+val: |████████████████████████████████████████| 287/287 [00:06<00:00, 41.36it/s]
+train: |▏                                       | 1/287 [00:01<05:37,  1.18s/it]
+Copied best model weights!
+train loss: 1.497334, val loss: 1.490527, val_accuracy: 38.85
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 287/287 [02:11<00:00,  2.19it/s]
+
+
+
+val: |████████████████████████████████████████| 287/287 [00:06<00:00, 41.46it/s]
+train: |▏                                       | 1/287 [00:01<05:38,  1.18s/it]
+train loss: 1.495229, val loss: 1.497294, val_accuracy: 38.27
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████████████████████████████| 287/287 [02:11<00:00,  2.19it/s]
+
+
+
+val: |████████████████████████████████████████| 287/287 [00:06<00:00, 41.61it/s]
+train: |                                                | 0/287 [00:00<?, ?it/s]
+Copied best model weights!
+train loss: 1.496336, val loss: 1.489932, val_accuracy: 38.78
+************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+train: |██████████████▎                       | 108/287 [00:49<01:22,  2.16it/s]
+Traceback (most recent call last):
+  File "train_single_task.py", line 52, in <module>
+    train_loss, train_metric = loss_epoch(model, criterion, train_dl,device, phase='train',opt=optimizer)
+  File "/home/joowan/Desktop/face_pr/utils/train_utils.py", line 51, in loss_epoch
+    loss_b, metric_b = loss_batch(loss_func, output, label, opt)
+  File "/home/joowan/Desktop/face_pr/utils/train_utils.py", line 22, in loss_batch
+    metric_b = metric_batch(output, target)
+  File "/home/joowan/Desktop/face_pr/utils/train_utils.py", line 15, in metric_batch
+    corrects = pred.eq(target.view_as(pred)).sum().item()
+KeyboardInterrupt
