@@ -1,0 +1,46 @@
+device:cuda:1,backbone:resnet152
+total gender train data:71144
+total emotion train data:73437
+total age train data:80370
+total gender val data:13844
+total emotion val data:9180
+total age val data:10047
+total gender test data:9844
+total emotion test data:9176
+total age test data:10041
+************************************************************
+1/100 current_lr:0.001
+
+train: |                                        | 1/556 [00:03<35:44,  3.86s/it]
+Traceback (most recent call last):
+  File "train_MTL.py", line 142, in <module>
+    emo_output=model(emo_img,task='emotion')
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/Desktop/face_pr/MTL/model/MTL_model.py", line 44, in forward
+    features=self.feature_extractor(x)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torchvision/models/resnet.py", line 285, in forward
+    return self._forward_impl(x)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torchvision/models/resnet.py", line 276, in _forward_impl
+    x = self.layer4(x)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torchvision/models/resnet.py", line 158, in forward
+    identity = self.downsample(x)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+  File "/home/joowan/anaconda3/envs/face/lib/python3.8/site-packages/torch/nn/functional.py", line 2450, in batch_norm
+    return torch.batch_norm(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 1; 23.70 GiB total capacity; 21.34 GiB already allocated; 4.56 MiB free; 22.31 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

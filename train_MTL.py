@@ -17,9 +17,8 @@ from torchsummary import summary
 ###################################################################
 wandb.init(project='MultiTask',entity='kookmin_ai')
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
-backbone='SwinT'
+backbone='resnet152'
 model=MultiTaskModel(phase='train')
-model=SwinMTL(phase='train')
 emo_weight=1
 gender_weight=1
 age_weight=1
@@ -54,9 +53,9 @@ test_gender_dataset=GenderDataset(phase='test')
 test_emo_dataset=EmotionDataset(phase='test')
 test_age_dataset=AgeDataset(phase='test')
 
-train_gender_loader=DataLoader(train_gender_dataset,batch_size=128,shuffle=True,num_workers=4)
-train_emo_loader=DataLoader(train_emo_dataset,batch_size=128,shuffle=True,num_workers=4)
-train_age_loader=DataLoader(train_age_dataset,batch_size=128,shuffle=True,num_workers=4)
+train_gender_loader=DataLoader(train_gender_dataset,batch_size=100,shuffle=True,num_workers=4)
+train_emo_loader=DataLoader(train_emo_dataset,batch_size=100,shuffle=True,num_workers=4)
+train_age_loader=DataLoader(train_age_dataset,batch_size=100,shuffle=True,num_workers=4)
 
 val_gender_loader=DataLoader(val_gender_dataset,batch_size=64,shuffle=True,num_workers=2)
 val_emo_loader=DataLoader(val_emo_dataset,batch_size=64,shuffle=True,num_workers=2)

@@ -1,7 +1,7 @@
 import torch
 import torchvision.models as models
 import torch.nn as nn
-from torchvision.models import resnet18,efficientnet_b1,swin_t
+from torchvision.models import resnet18,efficientnet_b1,swin_t,resnet152
 from torchsummary import summary
 
 class MultiTaskModel(nn.Module):
