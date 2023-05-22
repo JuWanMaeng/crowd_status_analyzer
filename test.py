@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 from PIL import Image
 import numpy as np
 import cv2
@@ -9,6 +10,7 @@ import torchvision.transforms as transforms
 from PIL import Image as im
 import time
 plt.switch_backend('TkAgg')
+
 emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
 gender={0:'man',1:'woman'}
 age={0:'youth',1:'student',2:'adult',3:'elder'}
@@ -111,41 +113,49 @@ man_emo_ratio=list(man_emo_dict.values())
 woman_emo_ratio=list(woman_emo_dict.values())
 
 # Create subplots
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3,figsize=(18,6))
+fig = plt.figure(figsize=(15,10))
+gs=gridspec.GridSpec(2,3)
 
-# Plot the pie chart
-wedges1, texts1, autotexts1 = ax1.pie(total_emo_ratio, labels=emo_labels, autopct=lambda x: '{:.1f}%'.format(x) if x > 0 else '', startangle=90)
+ax1=plt.subplot(gs[0,:])
+ax1.imshow(opencv_img)
+ax1.axis('off')
+
+ax2=plt.subplot(gs[1,0])
+wedges1, texts1, autotexts1 = ax2.pie(total_emo_ratio, labels=emo_labels, autopct=lambda x: '{:.1f}%'.format(x) if x > 0 else '', startangle=90)
 for i, text in enumerate(texts1):
     if total_emo_ratio[i] == 0:
         text.set_text('')
 
 # Plot the line graph
-ax2.plot(emo_labels, youth_emo_ratio, label='Youth')
-ax2.plot(emo_labels, student_emo_ratio, label='Student')
-ax2.plot(emo_labels, adult_emo_ratio, label='Adult')
-ax2.plot(emo_labels, elder_emo_ratio, label='Elder')
-ax2.set_ylim(0, 24)
-ax2.set_xlabel('Emotions')
-ax2.set_ylabel('Emotion Ratio')
-ax2.set_title('Emotional Distribution by Age')
-ax2.legend()
+ax3=plt.subplot(gs[1,1])
+ax3.plot(emo_labels, youth_emo_ratio, label='Youth')
+ax3.plot(emo_labels, student_emo_ratio, label='Student')
+ax3.plot(emo_labels, adult_emo_ratio, label='Adult')
+ax3.plot(emo_labels, elder_emo_ratio, label='Elder')
+ax3.set_ylim(0, 6)
+ax3.set_xlabel('Emotions')
+ax3.set_ylabel('Number of Individuals')
+ax3.set_title('Emotional Distribution by Age')
+ax3.legend()
 
 # Set the x positions of the bars
+ax4=plt.subplot(gs[1,2])
 x = range(len(emo_labels))
 
 # Plotting
-ax3.bar(x, man_emo_ratio, width=0.4, align='center', label='Men')
-ax3.bar(x, woman_emo_ratio, width=0.4, align='edge', label='Women')
+ax4.bar(x, man_emo_ratio, width=0.4, align='center', label='Men')
+ax4.bar(x, woman_emo_ratio, width=0.4, align='edge', label='Women')
 
 # Set the labels and title
-ax3.set_xlabel('Emotions')
-ax3.set_ylabel('Number of Individuals')
-ax3.set_title('Emotion Distribution between Men and Women')
+ax4.set_xlabel('Emotions')
+ax4.set_ylabel('Number of Individuals')
+ax4.set_title('Emotion Distribution between Men and Women')
+
 # Set the x-axis tick positions and labels
-ax3.set_xticks(x, emo_labels)
+ax4.set_xticks(x, emo_labels)
 
 # Add a legend
-ax3.legend()
+ax4.legend()
 
 # Adjust the layout
 plt.tight_layout()
