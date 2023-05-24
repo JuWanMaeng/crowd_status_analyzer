@@ -10,9 +10,9 @@ class EmotionModel(nn.Module):
     def __init__(self,phase='train',num_emotions=7):
         super(EmotionModel, self).__init__()
         if phase=='train':
-            resnet = resnet152(weights='ResNet152_Weights.IMAGENET1K_V1')
+            resnet = resnet18(weights='ResNet18_Weights.IMAGENET1K_V1')
         else:
-            resnet=resnet152()
+            resnet=resnet18()
         
         self.feature_extractor = resnet
         

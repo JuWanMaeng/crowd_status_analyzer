@@ -11,6 +11,7 @@ from MTL.model import resnet,MTL_model
 import torchvision.transforms as transforms
 from PIL import Image as imdddd
 import time
+import matplotlib.ticker as ticker
 
 
 emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
@@ -30,7 +31,7 @@ wt=torch.load('weight/MTL/resnet18_5step_MTL_212.pt', map_location=torch.device(
 multi_model.load_state_dict(wt)
 multi_model.to(device)
 
-video_path = "asian_video.mp4"
+video_path = "deadpool.mp4"
 cap = cv2.VideoCapture(video_path)
 frame_count = 0
 fps=0
@@ -132,14 +133,33 @@ while True:
         # Create subplots
         fig = plt.figure(figsize=(60,30))
         gs=gridspec.GridSpec(1,3)
+        
 
+        # Plot the line graph
+        ax1 = plt.subplot(gs[0, 0])
+        index = np.arange(len(emo_labels))
+        bar_width = 0.2
 
-        # ax1=plt.subplot(gs[0,:])
-        # ax1.imshow(opencv_img)
-        # ax1.axis('off')
+        rects1 = ax1.bar(index, youth_emo_ratio, bar_width, label='Youth')
+        rects2 = ax1.bar(index + bar_width, student_emo_ratio, bar_width, label='Student')
+        rects3 = ax1.bar(index + 2 * bar_width, adult_emo_ratio, bar_width, label='Adult')
+        rects4 = ax1.bar(index + 3 * bar_width, elder_emo_ratio, bar_width, label='Elder')
+
+        ax1.set_xlabel('Emotions', fontsize=40)
+        ax1.set_ylabel('Number of Individuals', fontsize=40)
+        ax1.set_title('Emotional Distribution by Age', fontsize=40)
+        ax1.set_xticks(index + 1.5 * bar_width)
+        ax1.set_xticklabels(emo_labels)
+        ax1.legend(fontsize=40)
+
+        # Format y-axis tick labels as integers
+        ax1.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+        ax1.tick_params(axis='x', labelsize=40)
+        ax1.tick_params(axis='y', labelsize=40)
+
 
         # Plot the pie chart
-        ax2=plt.subplot(gs[0,0])
+        ax2=plt.subplot(gs[0,1])
         wedges1, texts1, autotexts1 = ax2.pie(total_emo_ratio, labels=emo_labels, autopct=lambda x: '{:.1f}%'.format(x) if x > 0 else '', startangle=90)
         for i, text in enumerate(texts1):
             text.set_fontsize(50)
@@ -147,49 +167,35 @@ while True:
                 text.set_text('')
         for autotext in autotexts1:
             autotext.set_fontsize(40)
+        ax2.set_title('Total Emotion Distribution',fontsize=50)
 
-        # Plot the line graph
-        ax3 = plt.subplot(gs[0, 1])
-        ax3.plot(emo_labels, youth_emo_ratio, label='Youth', linewidth=2.5)  # Increase the line thickness to 2.5
-        ax3.plot(emo_labels, student_emo_ratio, label='Student', linewidth=2.5)  # Increase the line thickness to 2.5
-        ax3.plot(emo_labels, adult_emo_ratio, label='Adult', linewidth=2.5)  # Increase the line thickness to 2.5
-        ax3.plot(emo_labels, elder_emo_ratio, label='Elder', linewidth=2.5)  # Increase the line thickness to 2.5
-        ax3.set_ylim(0, 6)
+        # Plot the bar graph
+        ax3 = plt.subplot(gs[0, 2])
+        x = range(len(emo_labels))
+        ax3.bar(x, man_emo_ratio, width=0.4, align='center', label='Men')
+        ax3.bar(x, woman_emo_ratio, width=0.4, align='edge', label='Women')
         ax3.set_xlabel('Emotions', fontsize=40)  # Increase the font size of the x-axis label
         ax3.set_ylabel('Number of Individuals', fontsize=40)  # Increase the font size of the y-axis label
-        ax3.set_title('Emotional Distribution by Age', fontsize=40)  # Increase the font size of the title
+        ax3.set_title('Emotion Distribution between Men and Women', fontsize=40)  # Increase the font size of the title
+        ax3.set_xticks(x)
+        ax3.set_xticklabels(emo_labels, fontsize=40)  # Increase the font size of the x-axis tick labels
         ax3.legend(fontsize=40)  # Increase the font size of the legend
         ax3.tick_params(axis='x', labelsize=40)
         ax3.tick_params(axis='y', labelsize=40)
-
-        # Plot the bar graph
-        ax4 = plt.subplot(gs[0, 2])
-        x = range(len(emo_labels))
-        ax4.bar(x, man_emo_ratio, width=0.4, align='center', label='Men')
-        ax4.bar(x, woman_emo_ratio, width=0.4, align='edge', label='Women')
-        ax4.set_xlabel('Emotions', fontsize=40)  # Increase the font size of the x-axis label
-        ax4.set_ylabel('Number of Individuals', fontsize=40)  # Increase the font size of the y-axis label
-        ax4.set_title('Emotion Distribution between Men and Women', fontsize=40)  # Increase the font size of the title
-        ax4.set_xticks(x)
-        ax4.set_xticklabels(emo_labels, fontsize=40)  # Increase the font size of the x-axis tick labels
-        ax4.legend(fontsize=40)  # Increase the font size of the legend
-        ax4.tick_params(axis='x', labelsize=40)
-        ax4.tick_params(axis='y', labelsize=40)
-        #print(f'graph time:{time.time()-start_time:4f}')
-        
+            
    
 
         # Adjust the layout
         plt.tight_layout()
 
-        # Display the plot -> 이 부분에서 시간이 너무 오래 걸림
-        plt.savefig('result/res.jpg')
-        res=cv2.imread('result/res.jpg')
+        fig.canvas.draw()
+        graph_img = np.array(fig.canvas.renderer.buffer_rgba())
+        graph_img=cv2.cvtColor(graph_img,cv2.COLOR_BGR2RGB)
     
         cv2.namedWindow('Image 1', cv2.WINDOW_NORMAL)
         cv2.resizeWindow('Image 1',1600,1000)
         cv2.moveWindow('Image 1',1000,1)
-        cv2.imshow('Image 1', res)
+        cv2.imshow('Image 1', graph_img)
     
     cv2.namedWindow('open',cv2.WINDOW_NORMAL)
     cv2.resizeWindow('open',800,600)
