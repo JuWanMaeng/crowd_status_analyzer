@@ -70,9 +70,6 @@ while True:
     frame_count += 1 
     
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-    results=[]
-
     result=model(image)
     orig_img=result[0].orig_img
     img=Image.fromarray(orig_img)
@@ -100,7 +97,7 @@ while True:
         
     
 
-    if frame_count%30==0 or frame_count==1:
+    if frame_count%60==0 or frame_count==1:
         
         crop_img=orig_img[y1:y2,x1:x2,:]
         resized_img=cv2.resize(crop_img,(128,128))
