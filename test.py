@@ -15,15 +15,7 @@ import matplotlib.ticker as ticker
 from torchvision.models import  resnet18
 import torch.nn as nn
 from graph import generate_graph
-import threading
-import queue
-
-graph_queue=queue.Queue()
-
-def generate_graph_async(gender_pred, emo_pred, age_pred, length):
-    graph_img = generate_graph(gender_pred, emo_pred, age_pred, length)
-    graph_queue.put(graph_img)
-
+import concurrent.futures
 
 
 emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
@@ -134,17 +126,16 @@ while True:
         gender_pred=gender_output.argmax(1,keepdim=True)
         emo_pred=emo_output.argmax(1,keepdim=True)
         age_pred=age_output.argmax(1,keepdim=True)
-        print(f'inference time:{time.time()-start_time:.4f}')
-        
-        threading.Thread(target=generate_graph_async, args=(gender_pred, emo_pred, age_pred, len(orig_faces))).start()
 
-        if not graph_queue.empty():
-            graph_img=graph_queue.get()
-            cv2.namedWindow('Graph', cv2.WINDOW_NORMAL)
-            cv2.resizeWindow('Graph',1500,900)
-            cv2.moveWindow('Graph',1000,200)
-            cv2.imshow('Graph', graph_img)
-            cv2.waitKey(1)
+        executor = concurrent.futures.ThreadPoolExecutor(max_workers=8)
+        graph_future = executor.submit(generate_graph, gender_pred, emo_pred, age_pred, len(orig_faces))
+        
+        graph_img = graph_future.result()
+        cv2.namedWindow('Graph', cv2.WINDOW_NORMAL)
+        cv2.resizeWindow('Graph',1500,900)
+        cv2.moveWindow('Graph',1000,200)
+        cv2.imshow('Graph', graph_img)
+        cv2.waitKey(1)
 
     
     if cv2.waitKey(1) & 0xFF == ord('q'):

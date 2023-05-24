@@ -6,7 +6,7 @@ import matplotlib.ticker as ticker
 import concurrent.futures
 import time
 import matplotlib
-matplotlib.use('agg')
+# matplotlib.use('agg')
 
 emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
 gender={0:'man',1:'woman'}
@@ -20,7 +20,6 @@ gender_labels=['man','woman']
 
 def generate_graph(gender_pred,emo_pred,age_pred,length):
 
-    start=time.time()
     total_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
     youth_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
     student_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
@@ -119,12 +118,10 @@ def generate_graph(gender_pred,emo_pred,age_pred,length):
 
     # Adjust the layout
     plt.tight_layout()
-    print(f'first graph:{time.time()-start:.4f}')
     start=time.time()
   
     fig.canvas.draw()
     graph_img = np.array(fig.canvas.renderer.buffer_rgba())
     graph_img=cv2.cvtColor(graph_img,cv2.COLOR_BGR2RGB)
-    print(f'graph time{time.time()-start:.4f}')
     
     return graph_img
