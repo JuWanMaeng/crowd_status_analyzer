@@ -31,6 +31,7 @@ multi_model=MTL_model.MultiTaskModel(phase='test')
 wt=torch.load('weight/MTL/resnet18_5step_MTL_212.pt', map_location=torch.device('cuda:0'))
 multi_model.load_state_dict(wt)
 multi_model.to(device)
+multi_model.eval()
 
 video_path = "deadpool.mp4"
 cap = cv2.VideoCapture(video_path)
@@ -99,7 +100,7 @@ while True:
         gender_pred=gender_output.argmax(1,keepdim=True)
         emo_pred=emo_output.argmax(1,keepdim=True)
         age_pred=age_output.argmax(1,keepdim=True)
-        print(f'inference time:{time.time()-start_time:.4f}')
+
         
         graph_img = generate_graph(gender_pred,emo_pred,age_pred,len(orig_faces))
 
