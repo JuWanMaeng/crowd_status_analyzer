@@ -1,27 +1,16 @@
 from ultralytics import YOLO
-import matplotlib
-#matplotlib.use('TKAgg')
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
 from PIL import Image
 import numpy as np
 import cv2
 import torch
-from MTL.model import resnet,MTL_model
+from MTL.model import MTL_model
 import torchvision.transforms as transforms
-from PIL import Image as imdddd
 import time
-import matplotlib.ticker as ticker
-from graph import generate_graph
-
-
-emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
-gender={0:'man',1:'woman'}
-age={0:'youth',1:'student',2:'adult',3:'elder'}
-
-emo_labels=['sad','happy','angry','disgust','surprise','fear','neutral']
-age_labels=['youth','student','adult','elder']
-gender_labels=['man','woman']
+from graph import get_info,convert_seconds
+from pyqt_graph_ui import GraphWindow
+from PyQt5.QtWidgets import QApplication
+import sys
+import pandas as pd
 
 device='cuda:0'
 model=YOLO('ultralytics/models/v8/yolov8s.yaml')
@@ -38,14 +27,20 @@ cap = cv2.VideoCapture(video_path)
 frame_count = 0
 total_fps=0
 fps=0
+app = QApplication(sys.argv)
+window=None
+final_csv = []
+video_time=[]
 
+
+start_time=time.time()
 if not cap.isOpened():
     print("Error opening video file")
     exit()
 while True:
     total_fps+=fps
-    start_time=time.time()
     ret, frame = cap.read()
+    FPS_start_time=time.time()
     if not ret:
         break
     frame_count += 1
@@ -79,7 +74,7 @@ while True:
 
     
 
-    if frame_count%30==0 or frame_count==1:
+    if frame_count%60==0 or frame_count==1:
         start=time.time()
         crop_img=orig_img[y1:y2,x1:x2,:]
         resized_img=cv2.resize(crop_img,(128,128))
@@ -100,15 +95,23 @@ while True:
         gender_pred=gender_output.argmax(1,keepdim=True)
         emo_pred=emo_output.argmax(1,keepdim=True)
         age_pred=age_output.argmax(1,keepdim=True)
+        length=len(orig_faces)
 
+        csv_data,dicts=get_info(gender_pred,emo_pred,age_pred,length)
+        final_csv.append(csv_data)
         
-        graph_img = generate_graph(gender_pred,emo_pred,age_pred,len(orig_faces))
+        h,m,s=convert_seconds(time.time()-start_time)
+        video_tmp=f'{h}:{m}:{s}'
+        video_time.append(video_tmp)
+
+        if window is None:
+            window = GraphWindow(dicts)
+            window.show()
+        else:
+            window.update_data(dicts)
+
 
     
-        cv2.namedWindow('Graph', cv2.WINDOW_NORMAL)
-        cv2.resizeWindow('Graph',1500,900)
-        cv2.moveWindow('Graph',1000,200)
-        cv2.imshow('Graph', graph_img)
     
     cv2.namedWindow('Video',cv2.WINDOW_NORMAL)
     cv2.resizeWindow('Video',900,600)
@@ -119,8 +122,15 @@ while True:
 
     
     end_time=time.time()
-    fps=1/(end_time-start_time)
+    fps=1/(end_time-FPS_start_time)
       
 
 cap.release()
 print(f'{total_fps/frame_count:.2f}')
+
+colums = ['sad', 'happy', 'angry', 'disgust', 'surprise', 'fear', 'neutral']
+row = video_time
+#print(row)
+df = pd.DataFrame(final_csv, columns=colums, index=row)
+df.to_csv('data.csv', index=True)
+print(df)

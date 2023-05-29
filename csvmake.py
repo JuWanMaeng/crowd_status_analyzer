@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 import matplotlib
-matplotlib.use('agg')
+#matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from PIL import Image
@@ -12,45 +12,18 @@ import torchvision.transforms as transforms
 from PIL import Image as imdddd
 import time
 import matplotlib.ticker as ticker
-from torchvision.models import  resnet18
-import torch.nn as nn
 from graph import generate_graph
-import concurrent.futures
-
-
-emo={0:'sad', 1:'happy', 2:'angry', 3:'disgust', 4:'surprise', 5:'fear', 6:'neutral'}
-gender={0:'man',1:'woman'}
-age={0:'youth',1:'student',2:'adult',3:'elder'}
-
-emo_labels=['sad','happy','angry','disgust','surprise','fear','neutral']
-age_labels=['youth','student','adult','elder']
-gender_labels=['man','woman']
+import pandas as pd
 
 device='cuda:0'
-model=YOLO('ultralytics/models/v8/yolov8s.yaml')
-model=YOLO('weight/yolov8/s_best.pt')
+model=YOLO('yolov8s.yaml')
+model=YOLO('s_best.pt')
 
-
-emo_model=resnet.EmotionModel(phase='test')
-emo_wt=torch.load('weight/classification/emotion128_resnet18.pt')
-emo_model.load_state_dict(emo_wt)
-emo_model.to(device)
-
-age_model=resnet.AgeModel(phase='test')
-age_wt=torch.load('weight/classification/age128_4class_merge_resnet18.pt')
-age_model.load_state_dict(age_wt)
-age_model.to(device)
-
-gender_model=resnet18()
-gender_model.fc=nn.Linear(512,2)
-gender_wt=torch.load('weight/classification/UTK_gender_best_model.pt')
-gender_model.load_state_dict(gender_wt)
-gender_model.to(device)
-
-emo_model.eval()
-gender_model.eval()
-age_model.eval()
-
+multi_model=MTL_model.MultiTaskModel(phase='test')
+wt=torch.load('resnet18_5step_MTL_212.pt', map_location=torch.device('cuda:0'))
+multi_model.load_state_dict(wt)
+multi_model.to(device)
+multi_model.eval()
 
 video_path = "deadpool.mp4"
 cap = cv2.VideoCapture(video_path)
@@ -58,6 +31,8 @@ frame_count = 0
 total_fps=0
 fps=0
 
+final_csv = []
+count_time = 0
 
 if not cap.isOpened():
     print("Error opening video file")
@@ -65,16 +40,12 @@ if not cap.isOpened():
 while True:
     total_fps+=fps
     start_time=time.time()
-    
     ret, frame = cap.read()
     if not ret:
         break
-    frame_count += 1 
+    frame_count += 1
     
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-    results=[]
-
     result=model(image)
     orig_img=result[0].orig_img
     img=Image.fromarray(orig_img)
@@ -84,6 +55,7 @@ while True:
 
     if len(boxes)==0:
         print('no boxes')
+       
     else:
         orig_img=cv2.cvtColor(orig_img,cv2.COLOR_BGR2RGB)
         orig_faces=[]
@@ -99,15 +71,11 @@ while True:
                 crop_img=orig_img[y1:y2,x1:x2,:]
                 resized_img=cv2.resize(crop_img,(128,128))
                 orig_faces.append(resized_img)
-        
+
     
-    cv2.namedWindow('Video',cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('Video',900,600)
-    cv2.moveWindow('Video',100,350)
-    cv2.imshow('Video',opencv_img)
+
     if frame_count%30==0 or frame_count==1:
         start=time.time()
-        
         crop_img=orig_img[y1:y2,x1:x2,:]
         resized_img=cv2.resize(crop_img,(128,128))
         orig_faces.append(resized_img)
@@ -119,25 +87,30 @@ while True:
         faces=normalize(faces)
 
         faces=faces.to(device)
-        emo_output=emo_model(faces)
-        gender_output=gender_model(faces)
-        age_output=age_model(faces)
+        outputs=multi_model(faces)
+        emo_output=outputs[1]
+        gender_output=outputs[0]
+        age_output=outputs[2]
         
         gender_pred=gender_output.argmax(1,keepdim=True)
         emo_pred=emo_output.argmax(1,keepdim=True)
         age_pred=age_output.argmax(1,keepdim=True)
 
-        executor = concurrent.futures.ThreadPoolExecutor(max_workers=8)
-        graph_future = executor.submit(generate_graph, gender_pred, emo_pred, age_pred, len(orig_faces))
+
+        graph_img, csv_data = generate_graph(gender_pred,emo_pred,age_pred,len(orig_faces))
+        count_time += 1
+        final_csv.append(csv_data)
         
-        graph_img = graph_future.result()
+    
         cv2.namedWindow('Graph', cv2.WINDOW_NORMAL)
         cv2.resizeWindow('Graph',1500,900)
         cv2.moveWindow('Graph',1000,200)
         cv2.imshow('Graph', graph_img)
-        cv2.waitKey(1)
-
     
+    cv2.namedWindow('Video',cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('Video',900,600)
+    cv2.moveWindow('Video',100,350)
+    cv2.imshow('Video',opencv_img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
@@ -148,3 +121,10 @@ while True:
 
 cap.release()
 print(f'{total_fps/frame_count:.2f}')
+#print(final_csv)
+colums = ['sad', 'happy', 'angry', 'disgust', 'surprise', 'fear', 'neutral']
+row = [i for i in range(count_time)]
+#print(row)
+df = pd.DataFrame(final_csv, columns=colums, index=row)
+df.to_csv('data.csv', index=False)
+print(df)

@@ -16,6 +16,68 @@ emo_labels=['sad','happy','angry','disgust','surprise','fear','neutral']
 age_labels=['youth','student','adult','elder']
 gender_labels=['man','woman']
 
+def convert_seconds(seconds):
+    hours = int(seconds / 3600)  # Divide seconds by 3600 to get the number of hours
+    seconds %= 3600               # Calculate the remaining seconds
+
+    minutes = int(seconds / 60)  # Divide the remaining seconds by 60 to get the number of minutes
+    seconds %= 60                 # Calculate the remaining seconds
+
+    return hours, minutes, round(seconds)
+
+
+def get_info(gender_pred,emo_pred,age_pred,length):
+    
+    total_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    youth_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    student_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    adult_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    elder_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+
+    man_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    woman_emo_dict={'sad':0,'happy':0,'angry':0,'disgust':0,'surprise':0,'fear':0,'neutral':0}
+    
+    for i in range(length):
+        
+        emotion=emo[emo_pred[i].item()]
+        ages=age[age_pred[i].item()]
+        genders=gender[gender_pred[i].item()]
+        total_emo_dict[emo[emo_pred[i].item()]]+=1
+        
+        if ages == 'youth':
+            youth_emo_dict[emotion]+=1
+        elif ages=='student':
+            student_emo_dict[emotion]+=1
+        elif ages=='adult':
+            adult_emo_dict[emotion]+=1
+        else:
+            elder_emo_dict[emotion]+=1
+            
+        if genders=='man':
+            man_emo_dict[emotion]+=1
+        else:
+            woman_emo_dict[emotion]+=1
+    add=sum(total_emo_dict.values())
+    sad=int((total_emo_dict['sad']/add)*100)
+    happy=int((total_emo_dict['happy']/add)*100)
+    angry=int((total_emo_dict['angry']/add)*100)
+    disgust=int((total_emo_dict['disgust']/add)*100)
+    surprise=int((total_emo_dict['surprise']/add)*100)
+    fear=int((total_emo_dict['fear']/add)*100)
+    neutral=int((total_emo_dict['neutral']/add)*100)
+    
+    csv_data = [f'{sad}%',\
+                f'{happy}%',\
+                f'{angry}%', \
+                f'{disgust}%',\
+                f'{surprise}%',\
+                f'{fear}%',\
+                f'{neutral}%']
+    
+    
+    return csv_data, [total_emo_dict,youth_emo_dict,student_emo_dict,adult_emo_dict,elder_emo_dict,man_emo_dict,woman_emo_dict]
+        
+
 
 
 def generate_graph(gender_pred,emo_pred,age_pred,length):
