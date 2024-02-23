@@ -1,4 +1,4 @@
-﻿# crowd status (emotion, age, sex) analyzer
+﻿# crowd status (emotion, age, gender) analyzer
 
 # results
 
