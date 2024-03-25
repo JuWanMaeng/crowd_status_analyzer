@@ -3,8 +3,8 @@
 # results
 
 | backbone: resnet18 | emotion accuracy | age accuracy | gender accuracy | FPS (3080ti)| FPS (cpu)|
-| --- | --- | --- | --- | --- |
-| Single Task models | 70.1% | 81.0% | 93.8% | 40 | 13 }
+| --- | --- | --- | --- | --- | --- | --- |
+| Single Task models | 70.1% | 81.0% | 93.8% | 40 | 13 |
 | Multi Task model | 70.8% | 81.3% | 93.0% | 44 | 22 |
 
 
